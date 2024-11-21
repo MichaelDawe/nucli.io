@@ -12,7 +12,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
+	if $Content/ScrollContainer.scroll_vertical > 0:
+		$Gradient.visible = false
 
 
 func _on_theme_pressed() -> void:
@@ -34,3 +35,8 @@ func _on_theme_pressed() -> void:
 			$Header/VBoxContainer/HBoxContainer/SearchBar.add_theme_stylebox_override("normal", styleboxes[0])
 			$Content/TextureBackground.visible = false
 			_theme = 0
+
+
+func _on_scroll_down_button_pressed() -> void:
+	$Content/ScrollContainer.set_deferred("scroll_vertical", 890)
+	$Gradient.visible = false
