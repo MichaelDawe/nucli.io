@@ -27,9 +27,9 @@ func _ready() -> void:
 	# stop it automatically quitting
 	get_tree().set_auto_accept_quit(false)
 	# setup blank textures for heatmapping
-	hmTex = Image.create(hmTexSize.x, hmTexSize.y, false, Image.FORMAT_RGB8)
+	hmTex = Image.create(hmTexSize.x, hmTexSize.y*2.182, false, Image.FORMAT_RGB8)
 	hmTex.fill(Color.BLACK)
-	hmTex2 = Image.create(hmTexSize.x, hmTexSize.y, false, Image.FORMAT_RGB8)
+	hmTex2 = Image.create(hmTexSize.x, hmTexSize.y*2.182, false, Image.FORMAT_RGB8)
 	hmTex2.fill(Color.BLACK)
 
 
@@ -73,24 +73,32 @@ func _input(event: InputEvent) -> void:
 	# Heatmaps
 	# Mouse Movement
 	if event is InputEventMouseMotion:
-		var pos = Vector2i((event.position.x / get_viewport().size.x) * hmTexSize.x, (event.position.y / get_viewport().size.y) * hmTexSize.y)
+		var pos
+		if event.position.y < 76: # size of the header, so mouse is in the header
+			pos = Vector2i((event.position.x / get_viewport().size.x) * hmTexSize.x, (event.position.y / get_viewport().size.y) * hmTexSize.y)
+		else: # mouse is in the page, so add page scroll
+			pos = Vector2i((event.position.x / get_viewport().size.x) * hmTexSize.x, ((event.position.y + $Content/ScrollContainer.scroll_vertical) / get_viewport().size.y) * hmTexSize.y)
 		moves_recorded += 1
 		hmTex2.set_pixel(pos.x, pos.y, Color.GRAY)
 		$MoveHeatmapDisplay.texture = ImageTexture.create_from_image(hmTex2)
 	# Mouse Clicks
 	elif event is InputEventMouseButton:
-		var pos = Vector2i((event.position.x / get_viewport().size.x) * hmTexSize.x, (event.position.y / get_viewport().size.y) * hmTexSize.y)
+		var pos
+		if event.position.y < 76: # size of the header, so mouse is in the header
+			pos = Vector2i((event.position.x / get_viewport().size.x) * hmTexSize.x, (event.position.y / get_viewport().size.y) * hmTexSize.y)
+		else: # mouse is in the page, so add page scroll
+			pos = Vector2i((event.position.x / get_viewport().size.x) * hmTexSize.x, ((event.position.y + $Content/ScrollContainer.scroll_vertical) / get_viewport().size.y) * hmTexSize.y)
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			lclicks_recorded += 1
 			hmTex.set_pixel(pos.x, pos.y, Color.RED)
 			$ClickHeatmapDisplay.texture = ImageTexture.create_from_image(hmTex)
 		elif event.button_index == MOUSE_BUTTON_RIGHT:
 			rclicks_recorded += 1
-			hmTex.set_pixel(pos.x, pos.y, Color.BLUE)
+			hmTex.set_pixel(pos.x, pos.y, Color.GREEN)
 			$ClickHeatmapDisplay.texture = ImageTexture.create_from_image(hmTex)
 		elif event.button_index == MOUSE_BUTTON_MIDDLE:
 			mclicks_recorded += 1
-			hmTex.set_pixel(pos.x, pos.y, Color.GREEN)
+			hmTex.set_pixel(pos.x, pos.y, Color.BLUE)
 			$ClickHeatmapDisplay.texture = ImageTexture.create_from_image(hmTex)
 	elif event is InputEventKey and Input.is_key_pressed(KEY_F3):
 		match heatmap_displayed:

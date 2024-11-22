@@ -38,6 +38,11 @@ size_flags_vertical = 3
 [node name="save_analitics" type="Button" parent="Control"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_styles/focus = SubResource("StyleBoxFlat_hp78j")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_hp78j")
 theme_override_styles/hover = SubResource("StyleBoxFlat_hp78j")
@@ -47,6 +52,11 @@ text = "Save to Desktop :)"
 
 [node name="quit" type="Button" parent="Control"]
 layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0.830335, 0.830335, 0.830335, 1)
+theme_override_colors/font_hover_color = Color(0.82606, 0.82606, 0.82606, 1)
+theme_override_colors/font_pressed_color = Color(0.830335, 0.830335, 0.830335, 1)
+theme_override_colors/font_focus_color = Color(0.82606, 0.82606, 0.82606, 1)
+theme_override_colors/font_color = Color(0.838897, 0.838897, 0.838897, 1)
 theme_override_styles/focus = SubResource("StyleBoxFlat_m48no")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_m48no")
 theme_override_styles/hover = SubResource("StyleBoxFlat_m48no")

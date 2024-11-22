@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=13 format=4 uid="uid://p5cfdracprtf"]
+[gd_resource type="Theme" load_steps=14 format=4 uid="uid://p5cfdracprtf"]
 
 [sub_resource type="Image" id="Image_v5411"]
 data = {
@@ -1184,6 +1184,13 @@ cache/0/14/0/glyphs/565/texture_idx = 0
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dq8ru"]
 bg_color = Color(1, 1, 1, 0.752941)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x4pv6"]
+bg_color = Color(0.830335, 0.830335, 0.830335, 1)
+border_width_left = 6
+border_width_top = 3
+border_width_right = 6
+border_width_bottom = 3
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hyjiq"]
 
 [resource]
@@ -1214,4 +1221,5 @@ Button/styles/pressed = SubResource("StyleBoxEmpty_s287c")
 HSeparator/styles/separator = SubResource("StyleBoxEmpty_nsng1")
 Label/colors/font_color = Color(0, 0, 0, 1)
 Panel/styles/panel = SubResource("StyleBoxFlat_dq8ru")
+TooltipPanel/styles/panel = SubResource("StyleBoxFlat_x4pv6")
 VSeparator/styles/separator = SubResource("StyleBoxEmpty_hyjiq")
