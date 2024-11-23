@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://d3gpte1wfoao5"]
+[gd_scene load_steps=20 format=3 uid="uid://d3gpte1wfoao5"]
 
 [ext_resource type="Theme" uid="uid://cr3crcndaspom" path="res://dark_theme.tres" id="1_2vevm"]
 [ext_resource type="Texture2D" uid="uid://048lgcqq6bql" path="res://icons/logo-32.png" id="2_a7r7x"]
@@ -15,6 +15,7 @@
 [ext_resource type="StyleBox" uid="uid://b5wcj2xr70ql6" path="res://dark_theme_search_stylebox.tres" id="9_ljqka"]
 [ext_resource type="Texture2D" uid="uid://cg34lgnfrsbeh" path="res://icons/gradient.png" id="10_kl8m7"]
 [ext_resource type="Texture2D" uid="uid://34csch8evipr" path="res://icons/arrow-23-32.png" id="11_ttvpd"]
+[ext_resource type="Script" path="res://fadeout.gd" id="14_eo2dx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vacgx"]
 bg_color = Color(0.753984, 0.753984, 0.753984, 1)
@@ -1003,6 +1004,7 @@ offset_top = -336.0
 grow_horizontal = 2
 grow_vertical = 0
 mouse_filter = 2
+script = ExtResource("14_eo2dx")
 
 [node name="TextureRect" type="TextureRect" parent="Gradient"]
 modulate = Color(0, 0, 0, 1)

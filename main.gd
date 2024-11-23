@@ -36,7 +36,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
 	if $Content/ScrollContainer.scroll_vertical > 0:
-		$Gradient.visible = false
+		$Gradient.fadeOut(0.5)
 
 
 func _on_theme_pressed() -> void:
@@ -62,7 +62,7 @@ func _on_theme_pressed() -> void:
 
 func _on_scroll_down_button_pressed() -> void:
 	$Content/ScrollContainer.set_deferred("scroll_vertical", 890)
-	$Gradient.visible = false
+	$Gradient.fadeOut(0.5)
 
 
 func _on_accept_concent_button_pressed() -> void:
