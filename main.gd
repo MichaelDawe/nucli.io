@@ -31,6 +31,9 @@ func _ready() -> void:
 	hmTex.fill(Color.BLACK)
 	hmTex2 = Image.create(hmTexSize.x, hmTexSize.y*2.182, false, Image.FORMAT_RGB8)
 	hmTex2.fill(Color.BLACK)
+	# language menu
+	var popup = $Header/VBoxContainer/HBoxContainer/Language.get_popup()
+	popup.connect("id_pressed", language_menu)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -129,3 +132,14 @@ func save_analitics():
 	hmTex2.save_png(OS.get_system_dir(OS.SYSTEM_DIR_DESKTOP) + "/hmTex2.png")
 	
 	get_tree().quit()
+
+
+func language_menu(id):
+	match id:
+		0: # english
+			TranslationServer.set_locale("en")
+		1: # welsh
+			TranslationServer.set_locale("cy")
+		2: # chinese
+			TranslationServer.set_locale("zh")
+		#etc.
