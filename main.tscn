@@ -85,7 +85,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="Content/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
-text = "      New Games"
+text = "NEW_GAMES"
 
 [node name="GameCatagory" type="HBoxContainer" parent="Content/ScrollContainer/VBoxContainer"]
 layout_mode = 2
@@ -180,7 +180,7 @@ icon = ExtResource("5_j8if1")
 
 [node name="Label" type="Label" parent="Content/ScrollContainer/VBoxContainer/GameCatagory/AdDisplay"]
 layout_mode = 2
-text = "Advertisement"
+text = "AD"
 
 [node name="VSeparator5" type="VSeparator" parent="Content/ScrollContainer/VBoxContainer/GameCatagory"]
 layout_mode = 2
@@ -216,7 +216,7 @@ layout_mode = 2
 [node name="Label2" type="Label" parent="Content/ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
-text = "      Popular Games"
+text = "POPULAR_GAMES"
 
 [node name="GameCatagory2" type="HBoxContainer" parent="Content/ScrollContainer/VBoxContainer"]
 layout_mode = 2
@@ -393,7 +393,7 @@ icon = ExtResource("5_j8if1")
 
 [node name="Label" type="Label" parent="Content/ScrollContainer/VBoxContainer/GameCatagory3/AdDisplay"]
 layout_mode = 2
-text = "Advertisement"
+text = "AD"
 
 [node name="VSeparator3" type="VSeparator" parent="Content/ScrollContainer/VBoxContainer/GameCatagory3"]
 layout_mode = 2
@@ -699,7 +699,7 @@ icon = ExtResource("5_j8if1")
 
 [node name="Label" type="Label" parent="Content/ScrollContainer/VBoxContainer/GameCatagory6/AdDisplay"]
 layout_mode = 2
-text = "Advertisement"
+text = "AD"
 
 [node name="VSeparator5" type="VSeparator" parent="Content/ScrollContainer/VBoxContainer/GameCatagory6"]
 layout_mode = 2
@@ -920,12 +920,46 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
 
-[node name="Catagories" type="Button" parent="Header/VBoxContainer/HBoxContainer"]
+[node name="Catagories" type="MenuButton" parent="Header/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-tooltip_text = "Catagories"
+tooltip_text = "CATEGORIES"
 mouse_default_cursor_shape = 2
-text = "Catagories"
+text = "CATEGORIES"
 icon = ExtResource("3_l2gcq")
+item_count = 17
+popup/item_0/text = "NEW"
+popup/item_1/text = "FEATURED"
+popup/item_1/id = 1
+popup/item_2/text = "POPULAR"
+popup/item_2/id = 2
+popup/item_3/text = "RANDOM"
+popup/item_3/id = 3
+popup/item_4/id = 15
+popup/item_4/separator = true
+popup/item_5/text = "ADVENTURE"
+popup/item_5/id = 4
+popup/item_6/text = "STRATEGY"
+popup/item_6/id = 5
+popup/item_7/text = "PUZZLE"
+popup/item_7/id = 6
+popup/item_8/text = "HORROR"
+popup/item_8/id = 7
+popup/item_9/text = "SURVIVAL"
+popup/item_9/id = 8
+popup/item_10/text = "SIMULATION"
+popup/item_10/id = 9
+popup/item_11/text = "FPS"
+popup/item_11/id = 10
+popup/item_12/text = "DRIVING"
+popup/item_12/id = 11
+popup/item_13/id = 16
+popup/item_13/separator = true
+popup/item_14/text = "SOLO"
+popup/item_14/id = 12
+popup/item_15/text = "CO_OP"
+popup/item_15/id = 13
+popup/item_16/text = "PVP"
+popup/item_16/id = 14
 
 [node name="VSeparator3" type="VSeparator" parent="Header/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -938,7 +972,7 @@ size_flags_stretch_ratio = 6.0
 mouse_default_cursor_shape = 1
 theme_override_styles/hover = ExtResource("9_ljqka")
 theme_override_styles/normal = ExtResource("9_ljqka")
-text = "Search Nucli.io Games"
+text = "SEARCH_BAR"
 icon = ExtResource("4_ggocw")
 icon_alignment = 2
 
@@ -946,11 +980,17 @@ icon_alignment = 2
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Language" type="Button" parent="Header/VBoxContainer/HBoxContainer"]
+[node name="Language" type="MenuButton" parent="Header/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-tooltip_text = "Language"
+tooltip_text = "LANGUAGE"
 mouse_default_cursor_shape = 2
 icon = ExtResource("4_dyw1i")
+item_count = 3
+popup/item_0/text = "English"
+popup/item_1/text = "Cymraeg"
+popup/item_1/id = 1
+popup/item_2/text = "中國人"
+popup/item_2/id = 2
 
 [node name="0_1stretch2" type="VSeparator" parent="Header/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -959,7 +999,7 @@ size_flags_stretch_ratio = 0.1
 
 [node name="Theme" type="Button" parent="Header/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-tooltip_text = "Theme"
+tooltip_text = "THEME"
 mouse_default_cursor_shape = 2
 icon = ExtResource("8_4g4cy")
 
@@ -968,23 +1008,36 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
 
-[node name="Notifications" type="Button" parent="Header/VBoxContainer/HBoxContainer"]
+[node name="Notifications" type="MenuButton" parent="Header/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-tooltip_text = "Notifications"
+tooltip_text = "NOTIFICATIONS"
 mouse_default_cursor_shape = 2
 icon = ExtResource("5_mnxgi")
+item_count = 1
+popup/item_0/text = "NO_NOTIFICATIONS"
+popup/item_0/disabled = true
 
 [node name="0_1stretch" type="VSeparator" parent="Header/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.1
 
-[node name="Profile" type="Button" parent="Header/VBoxContainer/HBoxContainer"]
+[node name="Profile" type="MenuButton" parent="Header/VBoxContainer/HBoxContainer"]
 layout_mode = 2
-tooltip_text = "Profile"
+tooltip_text = "PROFILE"
 mouse_default_cursor_shape = 2
-text = "Profile"
+text = "PROFILE"
 icon = ExtResource("6_4e0b5")
+item_count = 5
+popup/item_0/text = "PROFILE"
+popup/item_1/text = "SETTINGS"
+popup/item_1/id = 1
+popup/item_2/text = "DASHBOARD"
+popup/item_2/id = 2
+popup/item_3/id = 4
+popup/item_3/separator = true
+popup/item_4/text = "SIGN_OUT"
+popup/item_4/id = 3
 
 [node name="VSeparator" type="VSeparator" parent="Header/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -1031,8 +1084,7 @@ offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 0
 mouse_default_cursor_shape = 2
-text = "See More
-"
+text = "SEE_MORE"
 icon = ExtResource("11_ttvpd")
 icon_alignment = 1
 vertical_icon_alignment = 2

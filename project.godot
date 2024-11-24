@@ -22,6 +22,10 @@ window/size/viewport_height=972
 window/size/resizable=false
 window/subwindows/embed_subwindows=false
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://UX_design_translations.cy.translation", "res://UX_design_translations.en.translation", "res://UX_design_translations.zh.translation")
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
