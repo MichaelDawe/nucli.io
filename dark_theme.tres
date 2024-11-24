@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=8 format=3 uid="uid://cr3crcndaspom"]
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://cr3crcndaspom"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_806iw"]
 
@@ -12,6 +12,12 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nsng1"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wlvvj"]
+bg_color = Color(1, 1, 1, 0.12549)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ub5ul"]
+bg_color = Color(0.114897, 0.114897, 0.114897, 1)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hyjiq"]
 
 [resource]
@@ -21,4 +27,6 @@ Button/styles/hover = SubResource("StyleBoxEmpty_n47qx")
 Button/styles/normal = SubResource("StyleBoxEmpty_b0cjd")
 Button/styles/pressed = SubResource("StyleBoxEmpty_s287c")
 HSeparator/styles/separator = SubResource("StyleBoxEmpty_nsng1")
+PopupMenu/styles/hover = SubResource("StyleBoxFlat_wlvvj")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_ub5ul")
 VSeparator/styles/separator = SubResource("StyleBoxEmpty_hyjiq")
