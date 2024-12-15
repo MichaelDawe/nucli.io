@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://d3gpte1wfoao5"]
+[gd_scene load_steps=21 format=3 uid="uid://d3gpte1wfoao5"]
 
 [ext_resource type="Theme" uid="uid://cr3crcndaspom" path="res://dark_theme.tres" id="1_2vevm"]
 [ext_resource type="Texture2D" uid="uid://048lgcqq6bql" path="res://icons/logo-32.png" id="2_a7r7x"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://main.gd" id="2_sxit2"]
 [ext_resource type="Texture2D" uid="uid://bkik5uviuywgl" path="res://icons/user_background.png" id="2_yh75h"]
 [ext_resource type="Texture2D" uid="uid://u8wqlf80u6yn" path="res://icons/category-9-32.png" id="3_l2gcq"]
+[ext_resource type="Texture2D" uid="uid://di1u84u0knomp" path="res://icons/banner_template.png" id="4_8gtjg"]
 [ext_resource type="Texture2D" uid="uid://dx5j47kvf3pme" path="res://icons/language-45-32.png" id="4_dyw1i"]
 [ext_resource type="Texture2D" uid="uid://blc0c3v8kjgp5" path="res://icons/search-663-32.png" id="4_ggocw"]
 [ext_resource type="Texture2D" uid="uid://mgank3atpyq7" path="res://icons/warthunder.jpg" id="5_j8if1"]
@@ -78,6 +79,15 @@ horizontal_scroll_mode = 0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
+
+[node name="Banner" type="MarginContainer" parent="Content/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="Content/ScrollContainer/VBoxContainer/Banner"]
+layout_mode = 2
+texture = ExtResource("4_8gtjg")
+expand_mode = 5
 
 [node name="HSeparator" type="HSeparator" parent="Content/ScrollContainer/VBoxContainer"]
 layout_mode = 2
@@ -935,6 +945,7 @@ popup/item_2/text = "POPULAR"
 popup/item_2/id = 3
 popup/item_3/text = "RANDOM"
 popup/item_3/id = 4
+popup/item_4/id = 4
 popup/item_4/separator = true
 popup/item_5/text = "ADVENTURE"
 popup/item_5/id = 5
@@ -952,6 +963,7 @@ popup/item_11/text = "FPS"
 popup/item_11/id = 11
 popup/item_12/text = "DRIVING"
 popup/item_12/id = 12
+popup/item_13/id = 13
 popup/item_13/separator = true
 popup/item_14/text = "SOLO"
 popup/item_14/id = 13
@@ -1034,6 +1046,7 @@ popup/item_1/text = "SETTINGS"
 popup/item_1/id = 2
 popup/item_2/text = "DASHBOARD"
 popup/item_2/id = 3
+popup/item_3/id = 3
 popup/item_3/separator = true
 popup/item_4/text = "SIGN_OUT"
 popup/item_4/id = 4

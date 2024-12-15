@@ -5,15 +5,19 @@ var themes = [preload("res://dark_theme.tres"), preload("res://light_theme.tres"
 var styleboxes = [preload("res://dark_theme_search_stylebox.tres"), preload("res://light_theme_search_stylebox.tres"), preload("res://user_theme_search_stylebox.tres")]
 
 
+var page = 0 # 0 = Main, 1 = Game, etc...
+
+
 var lclicks_recorded = 0
 var rclicks_recorded = 0
 var mclicks_recorded = 0
 var moves_recorded = 0
 
 
-var hmTex
-const hmTexSize = Vector2i(960, 540)
-var hmTex2
+var hmcMain # hmc = heat map clicks (red = left, green = right, blue = middle)
+var hmmMain # hmm = heat map movement
+# screen size is 1728 width by 972 height.  Scroll height 1663 (TODO update this whenever I change the scroll container's contents.)
+const hmTexSize = Vector2i((1728) / 3, (972 + 1663) / 3) # width, height
 
 
 var heatmap_displayed = 0
@@ -26,11 +30,12 @@ var quit_confirm = preload("res://quit_confirm.tscn")
 func _ready() -> void:
 	# stop it automatically quitting
 	get_tree().set_auto_accept_quit(false)
-	# setup blank textures for heatmapping
-	hmTex = Image.create(hmTexSize.x, hmTexSize.y*2.182, false, Image.FORMAT_RGB8)
-	hmTex.fill(Color.BLACK)
-	hmTex2 = Image.create(hmTexSize.x, hmTexSize.y*2.182, false, Image.FORMAT_RGB8)
-	hmTex2.fill(Color.BLACK)
+	# setup blank textures for heatmapping 
+	hmcMain = Image.create(hmTexSize.x, hmTexSize.y, false, Image.FORMAT_RGB8)
+	hmcMain.fill(Color.BLACK)
+	hmmMain = Image.create(hmTexSize.x, hmTexSize.y, false, Image.FORMAT_RGB8)
+	hmmMain.fill(Color.BLACK)
+	# TODO add all the pages here...
 	# language menu
 	var popup = $Header/VBoxContainer/HBoxContainer/Language.get_popup()
 	popup.connect("id_pressed", language_menu)
@@ -78,31 +83,43 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		var pos
 		if event.position.y < 76: # size of the header, so mouse is in the header
-			pos = Vector2i((event.position.x / get_viewport().size.x) * hmTexSize.x, (event.position.y / get_viewport().size.y) * hmTexSize.y)
+			pos = Vector2i(event.position.x / 3, event.position.y / 3)
 		else: # mouse is in the page, so add page scroll
-			pos = Vector2i((event.position.x / get_viewport().size.x) * hmTexSize.x, ((event.position.y + $Content/ScrollContainer.scroll_vertical) / get_viewport().size.y) * hmTexSize.y)
-		moves_recorded += 1
-		hmTex2.set_pixel(pos.x, pos.y, Color.GRAY)
-		$MoveHeatmapDisplay.texture = ImageTexture.create_from_image(hmTex2)
+			pos = Vector2i(event.position.x / 3, (event.position.y + $Content/ScrollContainer.scroll_vertical) / 3)
+		match page:
+			0:
+				moves_recorded += 1
+				hmmMain.set_pixel(pos.x, pos.y, Color.GRAY)
+			1:
+				pass # game page TODO
+			2:
+				pass # etc...
+		$MoveHeatmapDisplay.texture = ImageTexture.create_from_image(hmmMain)
 	# Mouse Clicks
 	elif event is InputEventMouseButton:
 		var pos
 		if event.position.y < 76: # size of the header, so mouse is in the header
-			pos = Vector2i((event.position.x / get_viewport().size.x) * hmTexSize.x, (event.position.y / get_viewport().size.y) * hmTexSize.y)
+			pos = Vector2i(event.position.x / 3, event.position.y / 3)
 		else: # mouse is in the page, so add page scroll
-			pos = Vector2i((event.position.x / get_viewport().size.x) * hmTexSize.x, ((event.position.y + $Content/ScrollContainer.scroll_vertical) / get_viewport().size.y) * hmTexSize.y)
+			pos = Vector2i(event.position.x / 3, (event.position.y + $Content/ScrollContainer.scroll_vertical) / 3)
+		var pixCol = Color.BLACK
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			lclicks_recorded += 1
-			hmTex.set_pixel(pos.x, pos.y, Color.RED)
-			$ClickHeatmapDisplay.texture = ImageTexture.create_from_image(hmTex)
+			pixCol = Color.RED
 		elif event.button_index == MOUSE_BUTTON_RIGHT:
 			rclicks_recorded += 1
-			hmTex.set_pixel(pos.x, pos.y, Color.GREEN)
-			$ClickHeatmapDisplay.texture = ImageTexture.create_from_image(hmTex)
+			pixCol = Color.GREEN
 		elif event.button_index == MOUSE_BUTTON_MIDDLE:
 			mclicks_recorded += 1
-			hmTex.set_pixel(pos.x, pos.y, Color.BLUE)
-			$ClickHeatmapDisplay.texture = ImageTexture.create_from_image(hmTex)
+			pixCol = Color.BLUE
+		match page:
+			0:
+				hmcMain.set_pixel(pos.x, pos.y, pixCol)
+				$ClickHeatmapDisplay.texture = ImageTexture.create_from_image(hmcMain)
+			1:
+				pass # game page TODO
+			2:
+				pass # etc...
 	elif event is InputEventKey and Input.is_key_pressed(KEY_F3):
 		match heatmap_displayed:
 			0:
@@ -128,8 +145,9 @@ func _notification(what): if what == NOTIFICATION_WM_CLOSE_REQUEST: add_child(qu
 func save_analitics():
 	print(OS.get_system_dir(OS.SYSTEM_DIR_DESKTOP))
 	
-	hmTex.save_png(OS.get_system_dir(OS.SYSTEM_DIR_DESKTOP) + "/hmTex.png")
-	hmTex2.save_png(OS.get_system_dir(OS.SYSTEM_DIR_DESKTOP) + "/hmTex2.png")
+	hmcMain.save_png(OS.get_system_dir(OS.SYSTEM_DIR_DESKTOP) + "/hmcMain.png")
+	hmmMain.save_png(OS.get_system_dir(OS.SYSTEM_DIR_DESKTOP) + "/hmmMain.png")
+	# TODO add all the pages here
 	
 	get_tree().quit()
 
