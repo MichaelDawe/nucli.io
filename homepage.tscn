@@ -1,0 +1,868 @@
+[gd_scene load_steps=12 format=3 uid="uid://c6nre2k4bjr8u"]
+
+[ext_resource type="Texture2D" uid="uid://bkik5uviuywgl" path="res://icons/user_background.png" id="1_y3ifd"]
+[ext_resource type="Shader" path="res://main.gdshader" id="2_u2h4p"]
+[ext_resource type="Texture2D" uid="uid://dr65xbaeb2np3" path="res://icons/cute_picture.jpg" id="3_m07e3"]
+[ext_resource type="Texture2D" uid="uid://crdby4gw31o3c" path="res://icons/famous_quote.jpg" id="4_yiq4x"]
+[ext_resource type="Texture2D" uid="uid://voxo8lc5w27e" path="res://icons/promotional_banner.jpg" id="5_bolve"]
+[ext_resource type="Texture2D" uid="uid://di1u84u0knomp" path="res://icons/banner_template.png" id="6_acntl"]
+[ext_resource type="Texture2D" uid="uid://ohmsl658ilsv" path="res://icons/image-32-256.png" id="7_fpk5a"]
+[ext_resource type="Texture2D" uid="uid://el63sk480q13" path="res://icons/profile-24-32.png" id="8_hmf61"]
+[ext_resource type="Texture2D" uid="uid://mgank3atpyq7" path="res://icons/warthunder.jpg" id="9_xgtfh"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5javr"]
+shader = ExtResource("2_u2h4p")
+shader_parameter/a = ExtResource("3_m07e3")
+shader_parameter/b = ExtResource("4_yiq4x")
+shader_parameter/c = ExtResource("5_bolve")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dm55m"]
+bg_color = Color(0.753984, 0.753984, 0.753984, 1)
+
+[node name="Content" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureBackground" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_y3ifd")
+expand_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+scroll_vertical = 100
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="Banner" type="MarginContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/Banner"]
+material = SubResource("ShaderMaterial_5javr")
+layout_mode = 2
+texture = ExtResource("6_acntl")
+expand_mode = 5
+
+[node name="HSeparator" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "NEW_GAMES"
+
+[node name="GameCatagory" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory/GameDisplay"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory/GameDisplay"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory/GameDisplay"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator2" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay2" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory/GameDisplay2"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory/GameDisplay2"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory/GameDisplay2"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator3" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay3" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory/GameDisplay3"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory/GameDisplay3"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory/GameDisplay3"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator4" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AdDisplay" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory/AdDisplay"]
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+icon = ExtResource("9_xgtfh")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory/AdDisplay"]
+layout_mode = 2
+text = "AD"
+
+[node name="VSeparator5" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay4" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory/GameDisplay4"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory/GameDisplay4"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory/GameDisplay4"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator6" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSeparator2" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "POPULAR_GAMES"
+
+[node name="GameCatagory2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay4" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory2"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory2/GameDisplay4"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory2/GameDisplay4"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory2/GameDisplay4"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator6" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay5" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory2"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory2/GameDisplay5"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory2/GameDisplay5"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory2/GameDisplay5"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator7" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay6" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory2"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory2/GameDisplay6"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory2/GameDisplay6"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory2/GameDisplay6"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator8" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay7" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory2"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory2/GameDisplay7"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory2/GameDisplay7"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory2/GameDisplay7"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator9" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay8" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory2"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory2/GameDisplay8"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory2/GameDisplay8"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory2/GameDisplay8"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator10" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSeparator3" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="GameCatagory3" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory3"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory3/GameDisplay"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory3/GameDisplay"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory3/GameDisplay"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator2" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AdDisplay" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory3"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory3/AdDisplay"]
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+icon = ExtResource("9_xgtfh")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory3/AdDisplay"]
+layout_mode = 2
+text = "AD"
+
+[node name="VSeparator3" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay2" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory3"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory3/GameDisplay2"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory3/GameDisplay2"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory3/GameDisplay2"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator4" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay3" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory3"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory3/GameDisplay3"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory3/GameDisplay3"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory3/GameDisplay3"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator5" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay4" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory3"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory3/GameDisplay4"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory3/GameDisplay4"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory3/GameDisplay4"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator6" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSeparator4" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "      All Games"
+
+[node name="GameCatagory4" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay4" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory4"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory4/GameDisplay4"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory4/GameDisplay4"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory4/GameDisplay4"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator6" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay5" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory4"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory4/GameDisplay5"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory4/GameDisplay5"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory4/GameDisplay5"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator7" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay6" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory4"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory4/GameDisplay6"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory4/GameDisplay6"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory4/GameDisplay6"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator8" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay7" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory4"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory4/GameDisplay7"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory4/GameDisplay7"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory4/GameDisplay7"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator9" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay8" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory4"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory4/GameDisplay8"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory4/GameDisplay8"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory4/GameDisplay8"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator10" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameCatagory6" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory6"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory6"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory6/GameDisplay"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory6/GameDisplay"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory6/GameDisplay"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator2" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory6"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay2" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory6"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory6/GameDisplay2"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory6/GameDisplay2"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory6/GameDisplay2"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator3" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory6"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay3" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory6"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory6/GameDisplay3"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory6/GameDisplay3"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory6/GameDisplay3"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator4" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory6"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="AdDisplay" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory6"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory6/AdDisplay"]
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+icon = ExtResource("9_xgtfh")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory6/AdDisplay"]
+layout_mode = 2
+text = "AD"
+
+[node name="VSeparator5" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory6"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay4" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory6"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory6/GameDisplay4"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory6/GameDisplay4"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory6/GameDisplay4"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator6" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory6"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameCatagory5" type="HBoxContainer" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VSeparator" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory5"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay4" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory5"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory5/GameDisplay4"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory5/GameDisplay4"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory5/GameDisplay4"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator6" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory5"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay5" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory5"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory5/GameDisplay5"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory5/GameDisplay5"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory5/GameDisplay5"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator7" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory5"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay6" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory5"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory5/GameDisplay6"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory5/GameDisplay6"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory5/GameDisplay6"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator8" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory5"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay7" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory5"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory5/GameDisplay7"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory5/GameDisplay7"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory5/GameDisplay7"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator9" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory5"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameDisplay8" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/GameCatagory5"]
+layout_mode = 2
+
+[node name="TextureRect" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory5/GameDisplay8"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_fpk5a")
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/GameCatagory5/GameDisplay8"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Username"
+icon = ExtResource("8_hmf61")
+alignment = 0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/GameCatagory5/GameDisplay8"]
+layout_mode = 2
+text = "Coolest Game Ever, Everything
+You've Ever Dreamt Of!"
+
+[node name="VSeparator10" type="VSeparator" parent="ScrollContainer/VBoxContainer/GameCatagory5"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSeparator5" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="FooterText" type="RichTextLabel" parent="ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_dm55m")
+bbcode_enabled = true
+text = "[center]
+[u]About Us[/u]
+
+Contact: [u]info@nucli.io[/u]
+
+Copyright © 2024 NUCLIIO GAMES
+
+"
+fit_content = true

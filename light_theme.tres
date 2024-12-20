@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=21 format=4 uid="uid://p5cfdracprtf"]
+[gd_resource type="Theme" load_steps=22 format=4 uid="uid://p5cfdracprtf"]
 
 [sub_resource type="Image" id="Image_v5411"]
 data = {
@@ -1236,6 +1236,18 @@ cache/0/14/0/glyphs/565/texture_idx = 0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nsng1"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x11aq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.133333, 0.133333, 0.133333, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dq8ru"]
 bg_color = Color(1, 1, 1, 0.752941)
 
@@ -1293,6 +1305,9 @@ Button/styles/normal = SubResource("StyleBoxEmpty_b0cjd")
 Button/styles/pressed = SubResource("StyleBoxEmpty_s287c")
 HSeparator/styles/separator = SubResource("StyleBoxEmpty_nsng1")
 Label/colors/font_color = Color(0, 0, 0, 1)
+LineEdit/colors/font_color = Color(0.133333, 0.133333, 0.133333, 1)
+LineEdit/styles/focus = SubResource("StyleBoxFlat_x11aq")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_x11aq")
 Panel/styles/panel = SubResource("StyleBoxFlat_dq8ru")
 PopupMenu/colors/font_color = Color(0.169246, 0.169245, 0.169245, 1)
 PopupMenu/colors/font_hover_color = Color(0, 0, 0, 1)

@@ -1,0 +1,201 @@
+[gd_scene load_steps=9 format=3 uid="uid://b1prkplw8ql7d"]
+
+[ext_resource type="Script" path="res://header.gd" id="1_21000"]
+[ext_resource type="Texture2D" uid="uid://048lgcqq6bql" path="res://icons/logo-32.png" id="1_mjn4s"]
+[ext_resource type="Texture2D" uid="uid://u8wqlf80u6yn" path="res://icons/category-9-32.png" id="2_qb3f8"]
+[ext_resource type="Texture2D" uid="uid://blc0c3v8kjgp5" path="res://icons/search-663-32.png" id="4_2c47a"]
+[ext_resource type="Texture2D" uid="uid://dx5j47kvf3pme" path="res://icons/language-45-32.png" id="5_trioa"]
+[ext_resource type="Texture2D" uid="uid://c6d2k8l3y7pc1" path="res://icons/dark-mode-32.png" id="6_ygg83"]
+[ext_resource type="Texture2D" uid="uid://cpmlvq2okstm0" path="res://icons/notification-11-32.png" id="7_mfjb2"]
+[ext_resource type="Texture2D" uid="uid://el63sk480q13" path="res://icons/profile-24-32.png" id="8_kgr45"]
+
+[node name="Header" type="Control"]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 76.0
+grow_horizontal = 2
+script = ExtResource("1_21000")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VSeparator2" type="VSeparator" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Logo" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "Nucli.io"
+mouse_default_cursor_shape = 2
+icon = ExtResource("1_mjn4s")
+
+[node name="0_1stretch3" type="VSeparator" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="Catagories" type="MenuButton" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "CATEGORIES"
+mouse_default_cursor_shape = 2
+text = "CATEGORIES"
+icon = ExtResource("2_qb3f8")
+item_count = 17
+popup/item_0/text = "NEW"
+popup/item_0/id = 1
+popup/item_1/text = "FEATURED"
+popup/item_1/id = 2
+popup/item_2/text = "POPULAR"
+popup/item_2/id = 3
+popup/item_3/text = "RANDOM"
+popup/item_3/id = 4
+popup/item_4/id = 4
+popup/item_4/separator = true
+popup/item_5/text = "ADVENTURE"
+popup/item_5/id = 5
+popup/item_6/text = "STRATEGY"
+popup/item_6/id = 6
+popup/item_7/text = "PUZZLE"
+popup/item_7/id = 7
+popup/item_8/text = "HORROR"
+popup/item_8/id = 8
+popup/item_9/text = "SURVIVAL"
+popup/item_9/id = 9
+popup/item_10/text = "SIMULATION"
+popup/item_10/id = 10
+popup/item_11/text = "FPS"
+popup/item_11/id = 11
+popup/item_12/text = "DRIVING"
+popup/item_12/id = 12
+popup/item_13/id = 13
+popup/item_13/separator = true
+popup/item_14/text = "SOLO"
+popup/item_14/id = 13
+popup/item_15/text = "CO_OP"
+popup/item_15/id = 14
+popup/item_16/text = "PVP"
+popup/item_16/id = 15
+
+[node name="VSeparator3" type="VSeparator" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SearchBarText" type="LineEdit" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 6.0
+placeholder_text = "SEARCH_BAR"
+alignment = 1
+
+[node name="SearchButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("4_2c47a")
+
+[node name="VSeparator4" type="VSeparator" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Language" type="MenuButton" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "LANGUAGE"
+mouse_default_cursor_shape = 2
+icon = ExtResource("5_trioa")
+item_count = 3
+popup/item_0/text = "English"
+popup/item_1/text = "Cymraeg"
+popup/item_1/id = 1
+popup/item_2/text = "中國人"
+popup/item_2/id = 2
+
+[node name="0_1stretch2" type="VSeparator" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="Theme" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "THEME"
+mouse_default_cursor_shape = 2
+icon = ExtResource("6_ygg83")
+
+[node name="0_1stretch4" type="VSeparator" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="Notifications" type="MenuButton" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "NOTIFICATIONS"
+mouse_default_cursor_shape = 2
+icon = ExtResource("7_mfjb2")
+item_count = 5
+popup/item_0/text = "NO_NOTIFICATIONS"
+popup/item_0/disabled = true
+popup/item_1/id = 3
+popup/item_1/separator = true
+popup/item_2/text = "VIEW_MESSAGES"
+popup/item_2/id = 1
+popup/item_3/id = 4
+popup/item_3/separator = true
+popup/item_4/text = "SHOW_FRIENDS"
+popup/item_4/id = 2
+
+[node name="0_1stretch" type="VSeparator" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="Profile" type="MenuButton" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+tooltip_text = "PROFILE"
+mouse_default_cursor_shape = 2
+text = "PROFILE"
+icon = ExtResource("8_kgr45")
+item_count = 7
+popup/item_0/text = "PROFILE"
+popup/item_0/id = 1
+popup/item_1/text = "DASHBOARD"
+popup/item_1/id = 3
+popup/item_2/text = "SETTINGS"
+popup/item_2/id = 2
+popup/item_3/id = 3
+popup/item_3/separator = true
+popup/item_4/text = "HELP_CENTER"
+popup/item_4/id = 6
+popup/item_5/id = 5
+popup/item_5/separator = true
+popup/item_6/text = "SIGN_OUT"
+popup/item_6/id = 4
+
+[node name="VSeparator" type="VSeparator" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/SearchButton" to="." method="_on_search_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Theme" to="." method="_on_theme_pressed"]

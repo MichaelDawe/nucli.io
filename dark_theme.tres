@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=10 format=3 uid="uid://cr3crcndaspom"]
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://cr3crcndaspom"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_806iw"]
 
@@ -11,6 +11,17 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s287c"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nsng1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_djn00"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wlvvj"]
 bg_color = Color(1, 1, 1, 0.12549)
@@ -27,6 +38,8 @@ Button/styles/hover = SubResource("StyleBoxEmpty_n47qx")
 Button/styles/normal = SubResource("StyleBoxEmpty_b0cjd")
 Button/styles/pressed = SubResource("StyleBoxEmpty_s287c")
 HSeparator/styles/separator = SubResource("StyleBoxEmpty_nsng1")
+LineEdit/styles/focus = SubResource("StyleBoxFlat_djn00")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_djn00")
 PopupMenu/styles/hover = SubResource("StyleBoxFlat_wlvvj")
 PopupMenu/styles/panel = SubResource("StyleBoxFlat_ub5ul")
 VSeparator/styles/separator = SubResource("StyleBoxEmpty_hyjiq")
