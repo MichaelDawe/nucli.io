@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmx6u8m2vvq6s"]
+
+[ext_resource type="Texture2D" uid="uid://ohmsl658ilsv" path="res://icons/image-32-256.png" id="1_bd3a6"]
+[ext_resource type="Script" path="res://game_display.gd" id="1_qrvcw"]
+[ext_resource type="Texture2D" uid="uid://el63sk480q13" path="res://icons/profile-24-32.png" id="2_iakiq"]
+
+[node name="GameDisplay" type="VBoxContainer"]
+script = ExtResource("1_qrvcw")
+
+[node name="Thumbnail" type="Button" parent="."]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+icon = ExtResource("1_bd3a6")
+
+[node name="Username" type="Button" parent="."]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+icon = ExtResource("2_iakiq")
+alignment = 0
+
+[node name="Description" type="Label" parent="."]
+layout_mode = 2
+text_overrun_behavior = 3

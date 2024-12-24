@@ -135,10 +135,6 @@ func _input(event: InputEvent) -> void:
 				$MoveHeatmapDisplay.visible = false
 
 
-func change_language(lang):
-	pass
-
-
 # override quit
 func _notification(what): if what == NOTIFICATION_WM_CLOSE_REQUEST: add_child(quit_confirm.instantiate())
 

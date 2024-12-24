@@ -1,0 +1,23 @@
+don't use the same file names as any already in here :),1,2,3,4,5
+Title,Jaunty Cow Race,Tower Crash,Farming Simulator 2050 Ultra Max FREE,Fall Monkeys,Whack a Toad
+Thumbnail file name,jcr.png,tc.png,fsumf.png,fm.png,wat.png
+Username,Alpha,Alpha,Carp,Joe Monka,Joe Monka
+User profile picture file name,alpha.png,alpha.png,carp.png,monka.png,monka.png
+Aditional 'screenshots' (optional),,,fsumf_s1_large.png,,
+Aditional 'screenshots' (optional),,,fsumf_s2_large.png,,
+Aditional 'screenshots' (optional),,,,,
+"Categories (separate with a comma, use only from this list, 
+if you really want to add a new one, let me know)
+ADVENTURE
+ACTION
+STRATEGY
+PUZZLE
+HORROR
+SURVIVAL
+SIMULATION
+FPS
+DRIVING
+CASUAL
+SOLO
+CO_OP
+PVP",,,,,

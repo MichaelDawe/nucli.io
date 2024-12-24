@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://cswvks1ldmwx"]
+
+[ext_resource type="Texture2D" uid="uid://mgank3atpyq7" path="res://icons/warthunder.jpg" id="1_gg202"]
+
+[node name="AdDisplay" type="VBoxContainer"]
+
+[node name="TextureRect2" type="Button" parent="."]
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+icon = ExtResource("1_gg202")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 2
+text = "AD"
