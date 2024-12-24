@@ -53,19 +53,19 @@ func _on_theme_pressed() -> void:
 		0:
 			theme = themes[1]
 			$Gradient/TextureRect.modulate = Color.WHITE
-			#$Header/VBoxContainer/HBoxContainer/SearchBar.add_theme_stylebox_override("normal", styleboxes[1])
+			$Header.get_node("Background").get_theme_stylebox('panel').bg_color = Color("d3d9e8")
 			_theme = 1
 		1:
 			theme = themes[2]
 			$Gradient/TextureRect.modulate = Color(1, 0.5, 0.69)
-			#$Header/VBoxContainer/HBoxContainer/SearchBar.add_theme_stylebox_override("normal", styleboxes[2])
 			$Content/TextureBackground.visible = true
+			$Header.get_node("Background").get_theme_stylebox('panel').bg_color = Color("ff7fb0")
 			_theme = 2
 		2:
 			theme = themes[0]
 			$Gradient/TextureRect.modulate = Color.BLACK
-			#$Header/VBoxContainer/HBoxContainer/SearchBar.add_theme_stylebox_override("normal", styleboxes[0])
 			$Content/TextureBackground.visible = false
+			$Header.get_node("Background").get_theme_stylebox('panel').bg_color = Color("131415")
 			_theme = 0
 
 
