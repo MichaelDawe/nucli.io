@@ -4,6 +4,7 @@ extends Control
 var search = false
 
 
+var homepage = preload("res://homepage.tscn")
 var searchpage = preload("res://search.tscn")
 
 
@@ -29,3 +30,10 @@ func _on_search_button_pressed() -> void:
 	get_parent().get_node("Content").free()
 	get_parent().add_child(s)
 	get_parent().move_child(s, 0)
+
+
+func _on_logo_pressed() -> void:
+	var h = homepage.instantiate()
+	get_parent().get_node("Content").free()
+	get_parent().add_child(h)
+	get_parent().move_child(h, 0)

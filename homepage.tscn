@@ -93,9 +93,6 @@ text = "POPULAR_GAMES"
 [node name="HSeparator3" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="HSeparator4" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
-layout_mode = 2
-
 [node name="all_games" type="Label" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24

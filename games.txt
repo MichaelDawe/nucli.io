@@ -1,11 +1,11 @@
-don't use the same file names as any already in here :),1,2,3,4,5
-Title,Jaunty Cow Race,Tower Crash,Farming Simulator 2050 Ultra Max FREE,Fall Monkeys,Whack a Toad
-Thumbnail file name,jcr.png,tc.png,fsumf.png,fm.png,wat.png
-Username,Alpha,Alpha,Carp,Joe Monka,Joe Monka
-User profile picture file name,alpha.png,alpha.png,carp.png,monka.png,monka.png
-Aditional 'screenshots' (optional),,,fsumf_s1_large.png,,
-Aditional 'screenshots' (optional),,,fsumf_s2_large.png,,
-Aditional 'screenshots' (optional),,,,,
+don't use the same file names as any already in here :),1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19
+Title,Jaunty Cow Race,Tower Crash,Farming Simulator 2050 Ultra Max FREE,Fall Monkeys,Whack a Toad,Mega Tetris,Cloud Hunter,Winter Trucker,Zombie Slayer 3000,Crystal Hunt,Jaunty Cow Race,Tower Crash,Farming Simulator 2050 Ultra Max FREE,Fall Monkeys,Whack a Toad,Mega Tetris,Cloud Hunter,Winter Trucker,Zombie Slayer 3000
+Thumbnail file name,jcr.png,tc.png,fsumf.png,fm.png,wat.png,mt.png,ch.png,wt.png,zs.png,crh.png,jcr.png,tc.png,fsumf.png,fm.png,wat.png,mt.png,ch.png,wt.png,zs.png
+Username,Alpha,Alpha,Carp,Joe Monka,Joe Monka,Alpha,Not A Bot,Not A Bot,Not A Bot,Gypsum,Alpha,Alpha,Carp,Joe Monka,Joe Monka,Alpha,Not A Bot,Not A Bot,Not A Bot
+User profile picture file name,alpha.png,alpha.png,carp.png,monka.png,monka.png,alpha.png,nab.png,nab.png,nab.png,gypsum.png,alpha.png,alpha.png,carp.png,monka.png,monka.png,alpha.png,nab.png,nab.png,nab.png
+Aditional 'screenshots' (optional),,,fsumf_s1_large.png,,,,,,,,,,fsumf_s1_large.png,,,,,,
+Aditional 'screenshots' (optional),,,fsumf_s2_large.png,,,,,,,,,,fsumf_s2_large.png,,,,,,
+Aditional 'screenshots' (optional),,,,,,,,,,,,,,,,,,,
 "Categories (separate with a comma, use only from this list, 
 if you really want to add a new one, let me know)
 ADVENTURE
@@ -20,4 +20,4 @@ DRIVING
 CASUAL
 SOLO
 CO_OP
-PVP",,,,,
+PVP",,,,,,,,,,,,,,,,,,,
