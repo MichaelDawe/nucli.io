@@ -2,6 +2,7 @@ extends Control
 
 
 var query = ""
+var query_words = ""
 var matches = []
 var games = {}
 @export var game_display : PackedScene
@@ -23,14 +24,27 @@ func _ready() -> void:
 	games.erase(len(games))
 	for row in games:
 		games[row].remove_at(0)
-	# if query in title add game index to matches
+	# make query lowercase and split into words
+	query = query.to_lower()
+	query_words = query.split(" ")
+	# if whole query in title: add game index to matches
 	for i in len(games[1]):
-		if query in games[1][i]:
+		if query in games[1][i].to_lower():
 			matches.append(i)
-	# if query in username and not already in matches add game index to matches
+	# if whole query in username, and not already in matches: add game index to matches
 	for i in len(games[1]):
-		if query in games[3][i] and i not in matches:
+		if query in games[3][i].to_lower() and i not in matches:
 			matches.append(i)
+	# if words in query are in title, and not already in matches: add game index to matches
+	for i in len(games[1]):
+		for word in query_words:
+			if word in games[1][i].to_lower() and i not in matches:
+				matches.append(i)
+	# if words in query are in username, and not already in matches: add game index to matches
+	for i in len(games[1]):
+		for word in query_words:
+			if word in games[3][i].to_lower() and i not in matches:
+				matches.append(i)
 	# loop through matches and add games to page same as homepage does
 	var gcat = game_section.instantiate()
 	ad_index = randi_range(1, 3)
