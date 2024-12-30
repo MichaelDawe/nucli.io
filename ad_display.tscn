@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cswvks1ldmwx"]
+[gd_scene load_steps=3 format=3 uid="uid://cswvks1ldmwx"]
 
 [ext_resource type="Texture2D" uid="uid://mgank3atpyq7" path="res://icons/warthunder.jpg" id="1_gg202"]
+[ext_resource type="Script" path="res://ad_display.gd" id="1_o5e6f"]
 
 [node name="AdDisplay" type="VBoxContainer"]
+script = ExtResource("1_o5e6f")
 
 [node name="TextureRect2" type="Button" parent="."]
 layout_mode = 2

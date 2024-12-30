@@ -61,6 +61,7 @@ func _ready() -> void:
 			gcat = game_section.instantiate()
 			gcat.add_game(gd)
 			ad_index = randi_range(1, 3)
+	gcat.space()
 	add_cat(gcat)
 			
 func add_cat(scene):
