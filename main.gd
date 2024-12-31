@@ -36,8 +36,13 @@ func _ready() -> void:
 	hmmMain.fill(Color.BLACK)
 	# TODO add all the pages here...
 	# language menu
-	var popup = $Header/VBoxContainer/HBoxContainer/Language.get_popup()
-	popup.connect("id_pressed", language_menu)
+	$Header/VBoxContainer/HBoxContainer/Language.get_popup().connect("id_pressed", language_menu)
+	# Catagories menu
+	$Header/VBoxContainer/HBoxContainer/Catagories.get_popup().connect("id_pressed", catagories_menu)
+	# Profile menu
+	$Header/VBoxContainer/HBoxContainer/Profile.get_popup().connect("id_pressed", profile_menu)
+	# Notifications menu
+	$Header/VBoxContainer/HBoxContainer/Notifications.get_popup().connect("id_pressed", notifications_menu)
 	# reset the scroll container
 	$Content/ScrollContainer.scroll_vertical = 0
 
@@ -158,3 +163,60 @@ func language_menu(id):
 		2: # chinese
 			TranslationServer.set_locale("zh")
 		#etc.
+
+
+func catagories_menu(id):
+	match id:
+		1: #new
+			pass
+		2: #featured
+			pass
+		3: #popular
+			pass
+		4: #random
+			pass
+		5: #adventure
+			pass
+		6: #action
+			pass
+		7: #stratagy
+			pass
+		8: #puzzle
+			pass
+		9: #horror
+			pass
+		10: #survival
+			pass
+		11: #simulation
+			pass
+		12: #fps
+			pass
+		13: #driving
+			pass
+		14: #casual
+			pass
+		15: #solo
+			pass
+		16: #co-op
+			pass
+		17: #pvp
+			pass
+
+
+func profile_menu(id):
+	match id:
+		1: #profile
+			pass
+		2: #dashboard
+			pass
+		3: #settings
+			pass
+		4: #help center
+			pass
+		5: #sign out
+			pass
+
+
+func notifications_menu(id):
+	match id:
+		pass
