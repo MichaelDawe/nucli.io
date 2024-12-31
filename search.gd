@@ -1,6 +1,6 @@
 extends Control
 
-
+var catagory = 0
 var query = ""
 var query_words = ""
 var matches = []
@@ -24,27 +24,67 @@ func _ready() -> void:
 	games.erase(len(games))
 	for row in games:
 		games[row].remove_at(0)
-	# make query lowercase and split into words
-	query = query.to_lower()
-	query_words = query.split(" ")
-	# if whole query in title: add game index to matches
-	for i in len(games[1]):
-		if query in games[1][i].to_lower():
-			matches.append(i)
-	# if whole query in username, and not already in matches: add game index to matches
-	for i in len(games[1]):
-		if query in games[3][i].to_lower() and i not in matches:
-			matches.append(i)
-	# if words in query are in title, and not already in matches: add game index to matches
-	for i in len(games[1]):
-		for word in query_words:
-			if word in games[1][i].to_lower() and i not in matches:
+	
+	# display catagories
+	if catagory > 0:
+		match catagory:
+			1: #new
+				pass
+			2: #featured
+				pass
+			3: #popular
+				pass
+			4: #random
+				pass
+			5: #adventure
+				pass
+			6: #action
+				pass
+			7: #stratagy
+				pass
+			8: #puzzle
+				pass
+			9: #horror
+				pass
+			10: #survival
+				pass
+			11: #simulation
+				pass
+			12: #fps
+				pass
+			13: #driving
+				pass
+			14: #casual
+				pass
+			15: #solo
+				pass
+			16: #co-op
+				pass
+			17: #pvp
+				pass
+	else:
+		# make query lowercase and split into words
+		query = query.to_lower()
+		query_words = query.split(" ")
+		# if whole query in title: add game index to matches
+		for i in len(games[1]):
+			if query in games[1][i].to_lower():
 				matches.append(i)
-	# if words in query are in username, and not already in matches: add game index to matches
-	for i in len(games[1]):
-		for word in query_words:
-			if word in games[3][i].to_lower() and i not in matches:
+		# if whole query in username, and not already in matches: add game index to matches
+		for i in len(games[1]):
+			if query in games[3][i].to_lower() and i not in matches:
 				matches.append(i)
+		# if words in query are in title, and not already in matches: add game index to matches
+		for i in len(games[1]):
+			for word in query_words:
+				if word in games[1][i].to_lower() and i not in matches:
+					matches.append(i)
+		# if words in query are in username, and not already in matches: add game index to matches
+		for i in len(games[1]):
+			for word in query_words:
+				if word in games[3][i].to_lower() and i not in matches:
+					matches.append(i)
+	
 	# loop through matches and add games to page same as homepage does
 	var gcat = game_section.instantiate()
 	ad_index = randi_range(1, 3)

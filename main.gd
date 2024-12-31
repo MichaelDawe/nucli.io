@@ -4,7 +4,11 @@ var _theme = 0
 var themes = [preload("res://dark_theme.tres"), preload("res://light_theme.tres"), preload("res://user_theme.tres")]
 
 
-var page = 0 # 0 = Main, 1 = Game, etc...
+var page = 0 # 404 = 404, 0 = Main, 1 = search, 2 = creator dashboard
+
+
+var searchpage = preload("res://search.tscn")
+var error404 = preload("res://404.tscn")
 
 
 var lclicks_recorded = 0
@@ -49,8 +53,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	if $Content/ScrollContainer.scroll_vertical > 0:
-		$Gradient.fadeOut(0.5)
+	if page == 0:
+		if $Content/ScrollContainer.scroll_vertical > 0:
+			$Gradient.fadeOut(0.5)
 
 
 func _on_theme_pressed() -> void:
@@ -86,58 +91,60 @@ func _on_accept_concent_button_pressed() -> void:
 func _input(event: InputEvent) -> void:
 	# Heatmaps
 	# Mouse Movement
-	if event is InputEventMouseMotion:
-		var pos
-		if event.position.y < 76: # size of the header, so mouse is in the header
-			pos = Vector2i(event.position.x / 3, event.position.y / 3)
-		else: # mouse is in the page, so add page scroll
-			pos = Vector2i(event.position.x / 3, (event.position.y + $Content/ScrollContainer.scroll_vertical) / 3)
-		match page:
-			0:
-				moves_recorded += 1
-				hmmMain.set_pixel(pos.x, pos.y, Color.GRAY)
-			1:
-				pass # game page TODO
-			2:
-				pass # etc...
-		$MoveHeatmapDisplay.texture = ImageTexture.create_from_image(hmmMain)
-	# Mouse Clicks
-	elif event is InputEventMouseButton:
-		var pos
-		if event.position.y < 76: # size of the header, so mouse is in the header
-			pos = Vector2i(event.position.x / 3, event.position.y / 3)
-		else: # mouse is in the page, so add page scroll
-			pos = Vector2i(event.position.x / 3, (event.position.y + $Content/ScrollContainer.scroll_vertical) / 3)
-		var pixCol = Color.BLACK
-		if event.button_index == MOUSE_BUTTON_LEFT:
-			lclicks_recorded += 1
-			pixCol = Color.RED
-		elif event.button_index == MOUSE_BUTTON_RIGHT:
-			rclicks_recorded += 1
-			pixCol = Color.GREEN
-		elif event.button_index == MOUSE_BUTTON_MIDDLE:
-			mclicks_recorded += 1
-			pixCol = Color.BLUE
-		match page:
-			0:
-				hmcMain.set_pixel(pos.x, pos.y, pixCol)
-				$ClickHeatmapDisplay.texture = ImageTexture.create_from_image(hmcMain)
-			1:
-				pass # game page TODO
-			2:
-				pass # etc...
-	elif event is InputEventKey and Input.is_key_pressed(KEY_F3):
-		match heatmap_displayed:
-			0:
-				heatmap_displayed = 1
-				$ClickHeatmapDisplay.visible = true
-			1:
-				heatmap_displayed = 2
-				$ClickHeatmapDisplay.visible = false
-				$MoveHeatmapDisplay.visible = true
-			2:
-				heatmap_displayed = 0
-				$MoveHeatmapDisplay.visible = false
+	match page:
+		0:
+			if event is InputEventMouseMotion:
+				var pos
+				if event.position.y < 76: # size of the header, so mouse is in the header
+					pos = Vector2i(event.position.x / 3, event.position.y / 3)
+				else: # mouse is in the page, so add page scroll
+					pos = Vector2i(event.position.x / 3, (event.position.y + $Content/ScrollContainer.scroll_vertical) / 3)
+				match page:
+					0:
+						moves_recorded += 1
+						hmmMain.set_pixel(pos.x, pos.y, Color.GRAY)
+					1:
+						pass # game page TODO
+					2:
+						pass # etc...
+				$MoveHeatmapDisplay.texture = ImageTexture.create_from_image(hmmMain)
+			# Mouse Clicks
+			elif event is InputEventMouseButton:
+				var pos
+				if event.position.y < 76: # size of the header, so mouse is in the header
+					pos = Vector2i(event.position.x / 3, event.position.y / 3)
+				else: # mouse is in the page, so add page scroll
+					pos = Vector2i(event.position.x / 3, (event.position.y + $Content/ScrollContainer.scroll_vertical) / 3)
+				var pixCol = Color.BLACK
+				if event.button_index == MOUSE_BUTTON_LEFT:
+					lclicks_recorded += 1
+					pixCol = Color.RED
+				elif event.button_index == MOUSE_BUTTON_RIGHT:
+					rclicks_recorded += 1
+					pixCol = Color.GREEN
+				elif event.button_index == MOUSE_BUTTON_MIDDLE:
+					mclicks_recorded += 1
+					pixCol = Color.BLUE
+				match page:
+					0:
+						hmcMain.set_pixel(pos.x, pos.y, pixCol)
+						$ClickHeatmapDisplay.texture = ImageTexture.create_from_image(hmcMain)
+					1:
+						pass # game page TODO
+					2:
+						pass # etc...
+			elif event is InputEventKey and Input.is_key_pressed(KEY_F3):
+				match heatmap_displayed:
+					0:
+						heatmap_displayed = 1
+						$ClickHeatmapDisplay.visible = true
+					1:
+						heatmap_displayed = 2
+						$ClickHeatmapDisplay.visible = false
+						$MoveHeatmapDisplay.visible = true
+					2:
+						heatmap_displayed = 0
+						$MoveHeatmapDisplay.visible = false
 
 
 # override quit
@@ -166,57 +173,41 @@ func language_menu(id):
 
 
 func catagories_menu(id):
-	match id:
-		1: #new
-			pass
-		2: #featured
-			pass
-		3: #popular
-			pass
-		4: #random
-			pass
-		5: #adventure
-			pass
-		6: #action
-			pass
-		7: #stratagy
-			pass
-		8: #puzzle
-			pass
-		9: #horror
-			pass
-		10: #survival
-			pass
-		11: #simulation
-			pass
-		12: #fps
-			pass
-		13: #driving
-			pass
-		14: #casual
-			pass
-		15: #solo
-			pass
-		16: #co-op
-			pass
-		17: #pvp
-			pass
+	page = 1
+	var s = searchpage.instantiate()
+	s.catagory = id
+	get_node("Content").free()
+	add_child(s)
+	move_child(s, 0)
+	get_node("Gradient").visible = false
 
 
 func profile_menu(id):
 	match id:
 		1: #profile
-			pass
+			spawn_404()
 		2: #dashboard
-			pass
+			spawn_404()
 		3: #settings
-			pass
+			spawn_404()
 		4: #help center
-			pass
+			spawn_404()
 		5: #sign out
-			pass
+			spawn_404()
 
 
 func notifications_menu(id):
 	match id:
-		pass
+		1: #view messages
+			spawn_404()
+		2: #show friends list
+			spawn_404()
+
+
+func spawn_404():
+	page = 404
+	var s = error404.instantiate()
+	get_node("Content").free()
+	add_child(s)
+	move_child(s, 0)
+	get_node("Gradient").visible = false

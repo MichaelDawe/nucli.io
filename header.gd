@@ -23,6 +23,7 @@ func _on_search_button_pressed() -> void:
 
 
 func load_search():
+	get_parent().page = 1
 	var query = $VBoxContainer/HBoxContainer/SearchBarText.text
 	var s = searchpage.instantiate()
 	s.query = query
@@ -33,6 +34,7 @@ func load_search():
 
 
 func _on_logo_pressed() -> void:
+	get_parent().page = 0
 	var h = homepage.instantiate()
 	get_parent().get_node("Content").free()
 	get_parent().add_child(h)
