@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://d3gpte1wfoao5"]
+[gd_scene load_steps=11 format=3 uid="uid://d3gpte1wfoao5"]
 
 [ext_resource type="Theme" uid="uid://cr3crcndaspom" path="res://dark_theme.tres" id="1_2vevm"]
 [ext_resource type="Script" path="res://main.gd" id="2_sxit2"]
@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://34csch8evipr" path="res://icons/arrow-23-32.png" id="11_ttvpd"]
 [ext_resource type="PackedScene" uid="uid://b1prkplw8ql7d" path="res://header.tscn" id="12_mainc"]
 [ext_resource type="Script" path="res://fadeout.gd" id="14_eo2dx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_51ym6"]
+bg_color = Color(0, 0, 0, 0.494118)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mbdkw"]
 bg_color = Color(0.753984, 0.753984, 0.753984, 1)
@@ -74,7 +77,6 @@ icon_alignment = 1
 vertical_icon_alignment = 2
 
 [node name="Consent" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -86,6 +88,16 @@ grow_vertical = 0
 mouse_filter = 2
 
 [node name="Panel" type="Panel" parent="Consent"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -831.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_51ym6")
+
+[node name="Panel2" type="Panel" parent="Consent"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -103,7 +115,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "
-By using this application you agree to the use of analitics."
+By using this application you agree to the use of analitics.  Nothing is transmitted over the network, you will be asked if you want to save analytics files when you exit."
 horizontal_alignment = 1
 
 [node name="Accept_Concent_Button" type="Button" parent="Consent"]
@@ -120,12 +132,6 @@ offset_bottom = 23.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_default_cursor_shape = 2
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 text = "I AGREE
 "
 icon_alignment = 1

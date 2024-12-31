@@ -16,6 +16,7 @@ theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
 icon = ExtResource("1_bd3a6")
+flat = true
 
 [node name="Username" type="Button" parent="."]
 layout_mode = 2
@@ -26,6 +27,7 @@ theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
 icon = ExtResource("2_iakiq")
+flat = true
 alignment = 0
 
 [node name="Description" type="Label" parent="."]
