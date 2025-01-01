@@ -3,11 +3,13 @@
 importer="csv_translation"
 type="Translation"
 uid="uid://dnrhtvb4l4wak"
-valid=false
 
 [deps]
 
+files=["res://UX_design_translations.en.translation", "res://UX_design_translations.cy.translation", "res://UX_design_translations.zh.translation"]
+
 source_file="res://UX_design_translations.csv"
+dest_files=["res://UX_design_translations.en.translation", "res://UX_design_translations.cy.translation", "res://UX_design_translations.zh.translation"]
 
 [params]
 

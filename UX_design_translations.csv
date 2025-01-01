@@ -1,10 +1,10 @@
-﻿,en,cy,zh
-NEW_GAMES,    New Games,    Gemau Newydd,    新遊戲
-POPULAR_GAMES,    Popular Games,    Gemau Poblogaidd,    熱門遊戲
-SEE_MORE,See More,Gweld Mwy,看更多
-CATEGORIES,Categories,Categorïau,類別
-SEARCH_BAR,Search Nucli.io Games,Chwilio Gemau Nucli.io,搜尋 Nucli.io 遊戲
-PROFILE,Profile,Proffil,側面像
+,en,cy,zh
+NEW_GAMES,    New Games,    Gemau Newydd,    ???
+POPULAR_GAMES,    Popular Games,    Gemau Poblogaidd,    ????
+SEE_MORE,See More,Gweld Mwy,???
+CATEGORIES,Categories,Categor�au,??
+SEARCH_BAR,Search Nucli.io Games,Chwilio Gemau Nucli.io,?? Nucli.io ??
+PROFILE,Profile,Proffil,???
 SAVE_ANALITICS,Save Analitics?,,
 SAVE_DESKTOP,Save to Desktop :),,
 DONT_SAVE,Quit Without Saving :(,,
@@ -58,3 +58,4 @@ SHARE_PROFILE,SHARE YOUR PROFILE,,
 HELP,HELP,,
 REPORT_PROBLEM,REPORT A PROBLEM,,
 UPLOAD_NEW_LABEL,UPLOAD NEW CREATION,,
+NO_SEARCH_RESULTS,Sorry there are no matches,,

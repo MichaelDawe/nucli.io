@@ -65,13 +65,13 @@ func _on_theme_pressed() -> void:
 			theme = themes[1]
 			$Gradient/TextureRect.modulate = Color.WHITE
 			$Header.get_node("Background").get_theme_stylebox('panel').bg_color = Color("d3d9e8")
-			_theme = 1
+			_theme = 2 # TODO add 3rd theme again if time to fix background image and text boxes etc.
 		1:
 			theme = themes[2]
 			$Gradient/TextureRect.modulate = Color(1, 0.5, 0.69)
 			$Content/TextureBackground.visible = true
 			$Header.get_node("Background").get_theme_stylebox('panel').bg_color = Color("ff7fb0")
-			_theme = 2
+			_theme = 2 
 		2:
 			theme = themes[0]
 			$Gradient/TextureRect.modulate = Color.BLACK
