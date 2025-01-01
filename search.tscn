@@ -61,6 +61,12 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 24
 text = "SEARCH_RESULTS"
 
+[node name="No_Results" type="Label" parent="ScrollContainer/VBoxContainer"]
+visible = false
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "NO_SEARCH_RESULTS"
+
 [node name="HSeparator5" type="HSeparator" parent="ScrollContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3

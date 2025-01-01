@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://1aij4srh0ya3"]
+[gd_scene load_steps=7 format=3 uid="uid://1aij4srh0ya3"]
 
 [ext_resource type="Script" path="res://creator_dashboard_upload.gd" id="1_qsc0y"]
-[ext_resource type="Theme" uid="uid://cr3crcndaspom" path="res://dark_theme.tres" id="1_t15ob"]
 [ext_resource type="Texture2D" uid="uid://b82x24b26fsu6" path="res://temp/game_upload_page2.png" id="3_gtjw5"]
 [ext_resource type="Texture2D" uid="uid://bkik5uviuywgl" path="res://icons/user_background.png" id="4_fat83"]
 [ext_resource type="Texture2D" uid="uid://dutjvgu6bedsj" path="res://icons/arrow-up-51-48.png" id="4_vgqrw"]
@@ -17,7 +16,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_t15ob")
 script = ExtResource("1_qsc0y")
 
 [node name="Background" type="Panel" parent="."]

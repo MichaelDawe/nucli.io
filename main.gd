@@ -7,6 +7,7 @@ var themes = [preload("res://dark_theme.tres"), preload("res://light_theme.tres"
 var page = 0 # 404 = 404, 0 = Main, 1 = search, 2 = creator dashboard
 
 
+var c_dashboard = preload("res://creator_dashboard_upload.tscn") #TODO change to different page
 var searchpage = preload("res://search.tscn")
 var error404 = preload("res://404.tscn")
 
@@ -187,7 +188,12 @@ func profile_menu(id):
 		1: #profile
 			spawn_404()
 		2: #dashboard
-			spawn_404()
+			page = 2
+			var s = c_dashboard.instantiate()
+			get_node("Content").free()
+			add_child(s)
+			move_child(s, 0)
+			get_node("Gradient").visible = false
 		3: #settings
 			spawn_404()
 		4: #help center

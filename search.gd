@@ -103,6 +103,9 @@ func _ready() -> void:
 			ad_index = randi_range(1, 3)
 	gcat.space()
 	add_cat(gcat)
+	# say no results if no results
+	if len(matches) == 0:
+		$ScrollContainer/VBoxContainer/No_Results.visible = true
 			
 func add_cat(scene):
 	$ScrollContainer/VBoxContainer.add_child(scene)
