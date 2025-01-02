@@ -4,9 +4,12 @@ var _theme = 0
 var themes = [preload("res://dark_theme.tres"), preload("res://light_theme.tres"), preload("res://user_theme.tres")]
 
 
-var page = 0 # 404 = 404, 0 = Main, 1 = search, 2 = creator dashboard
+var page = 0 # 404 = 404, 0 = Main, 1 = search, 2 = creator dashboard, 3 = settings, 4 = messages, 5 = friends
 
 
+var messages_page = preload("res://messages.tscn")
+var friends_page = preload("res://view_friends.tscn")
+var settings_page = preload("res://settings.tscn")
 var c_dashboard = preload("res://creator_dashboard_upload.tscn") #TODO change to different page
 var searchpage = preload("res://search.tscn")
 var error404 = preload("res://404.tscn")
@@ -195,7 +198,12 @@ func profile_menu(id):
 			move_child(s, 0)
 			get_node("Gradient").visible = false
 		3: #settings
-			spawn_404()
+			page = 3
+			var s = settings_page.instantiate()
+			get_node("Content").free()
+			add_child(s)
+			move_child(s, 0)
+			get_node("Gradient").visible = false
 		4: #help center
 			spawn_404()
 		5: #sign out
@@ -205,15 +213,35 @@ func profile_menu(id):
 func notifications_menu(id):
 	match id:
 		1: #view messages
-			spawn_404()
+			page = 4
+			var s = messages_page.instantiate()
+			get_node("Content").free()
+			add_child(s)
+			move_child(s, 0)
+			get_node("Gradient").visible = false
 		2: #show friends list
-			spawn_404()
+			page = 5
+			var s = friends_page.instantiate()
+			get_node("Content").free()
+			add_child(s)
+			move_child(s, 0)
+			get_node("Gradient").visible = false
 
 
 func spawn_404():
 	page = 404
 	var s = error404.instantiate()
-	get_node("Content").free()
+	get_node("Content").name = "tempyyyyaew908i3567q4pngfkl"
 	add_child(s)
 	move_child(s, 0)
 	get_node("Gradient").visible = false
+	get_node("tempyyyyaew908i3567q4pngfkl").queue_free()
+	
+func spawn_settings():
+	page = 3
+	var s = settings_page.instantiate()
+	get_node("Content").name = "tempyyyyaew908i354567967q4pngfkl"
+	add_child(s)
+	move_child(s, 0)
+	get_node("Gradient").visible = false
+	get_node("tempyyyyaew908i354567967q4pngfkl").queue_free()

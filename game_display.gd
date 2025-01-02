@@ -1,6 +1,9 @@
 extends VBoxContainer
 
 
+var database_index = -1
+
+
 var thumbnail = ""
 var username = ""
 var userpic = ""
