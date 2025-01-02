@@ -9,7 +9,7 @@ func _ready() -> void:
 	$ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer/Label2.text = "  " + str(randi_range(10, 120))
 	$ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer2/Label3.text = "  " + str(randi_range(10, 100) / 10.0)
 	$ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer3/Label4.text = "  " + str(randi_range(40, 90)) + "%"
-
+	$ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer2/Label3.text = $ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer/Label2.text
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
