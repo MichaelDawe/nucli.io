@@ -4,9 +4,12 @@ var _theme = 0
 var themes = [preload("res://dark_theme.tres"), preload("res://light_theme.tres"), preload("res://user_theme.tres")]
 
 
-var page = 0 # 404 = 404, 0 = Main, 1 = search, 2 = creator dashboard, 3 = settings, 4 = messages, 5 = friends
+var page = 0 # 404 = 404, 0 = Main, 1 = search, 2 = creator dashboard, 3 = settings, 4 = messages, 5 = friends, 6 = game, 7 = user, 8 = loading
 
 
+var loading = preload("res://loading.tscn")
+var other_user_page = preload("res://other_user_profile.tscn")
+var game_page = preload("res://games_page.tscn")
 var messages_page = preload("res://messages.tscn")
 var friends_page = preload("res://view_friends.tscn")
 var settings_page = preload("res://settings.tscn")
@@ -78,7 +81,7 @@ func _on_theme_pressed() -> void:
 		2:
 			theme = themes[0]
 			$Gradient/TextureRect.modulate = Color.BLACK
-			$Content/TextureBackground.visible = false
+			#$Content/TextureBackground.visible = false
 			$Header.get_node("Background").get_theme_stylebox('panel').bg_color = Color("131415")
 			_theme = 0
 
@@ -236,7 +239,8 @@ func spawn_404():
 	move_child(s, 0)
 	get_node("Gradient").visible = false
 	get_node("tempyyyyaew908i3567q4pngfkl").queue_free()
-	
+
+
 func spawn_settings():
 	page = 3
 	var s = settings_page.instantiate()
@@ -245,3 +249,35 @@ func spawn_settings():
 	move_child(s, 0)
 	get_node("Gradient").visible = false
 	get_node("tempyyyyaew908i354567967q4pngfkl").queue_free()
+
+
+func spawn_game(id):
+	page = 6
+	var s = game_page.instantiate()
+	s.id = id
+	get_node("Content").name = "tempyyyyaew908i354567967q4pngfsdgjkl"
+	add_child(s)
+	move_child(s, 0)
+	get_node("Gradient").visible = false
+	get_node("tempyyyyaew908i354567967q4pngfsdgjkl").queue_free()
+	
+
+func spawn_user(id):
+	page = 7
+	var s = other_user_page.instantiate()
+	s.id = id
+	get_node("Content").name = "tempyyyysjthaew908i354567967q4pngfkl"
+	add_child(s)
+	move_child(s, 0)
+	get_node("Gradient").visible = false
+	get_node("tempyyyysjthaew908i354567967q4pngfkl").queue_free()
+
+
+func spawn_loading():
+	page = 8
+	var s = loading.instantiate()
+	get_node("Content").name = "tempyyyysjthaew908i354567967q4pw5jwngfkl"
+	add_child(s)
+	move_child(s, 0)
+	get_node("Gradient").visible = false
+	get_node("tempyyyysjthaew908i354567967q4pw5jwngfkl").queue_free()

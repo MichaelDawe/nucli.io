@@ -1,11 +1,11 @@
-don't use the same file names as any already in here :),1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19
-Title,Jaunty Cow Race,Tower Crash,Farming Simulator 2050 Ultra Max FREE,Fall Monkeys,Whack a Toad,Mega Tetris,Cloud Hunter,Winter Trucker,Zombie Slayer 3000,Crystal Hunt,Jaunty Cow Race,Tower Crash,Farming Simulator 2050 Ultra Max FREE,Fall Monkeys,Whack a Toad,Mega Tetris,Cloud Hunter,Winter Trucker,Zombie Slayer 3000
-Thumbnail file name,jcr.png,tc.png,fsumf.png,fm.png,wat.png,mt.png,ch.png,wt.png,zs.png,crh.png,jcr.png,tc.png,fsumf.png,fm.png,wat.png,mt.png,ch.png,wt.png,zs.png
-Username,Alpha,Alpha,Carp,Joe Monka,Joe Monka,Alpha,Not A Bot,Not A Bot,Not A Bot,Gypsum,Alpha,Alpha,Carp,Joe Monka,Joe Monka,Alpha,Not A Bot,Not A Bot,Not A Bot
-User profile picture file name,alpha.png,alpha.png,carp.png,monka.png,monka.png,alpha.png,nab.png,nab.png,nab.png,gypsum.png,alpha.png,alpha.png,carp.png,monka.png,monka.png,alpha.png,nab.png,nab.png,nab.png
-Aditional 'screenshots' (optional),,,fsumf_s1_large.png,,,,,,,,,,fsumf_s1_large.png,,,,,,
-Aditional 'screenshots' (optional),,,fsumf_s2_large.png,,,,,,,,,,fsumf_s2_large.png,,,,,,
-Aditional 'screenshots' (optional),,,,,,,,,,,,,,,,,,,
+don't use the same file names as any already in here :),1,2,3,4,5,6,7,8,9,10
+Title,Jaunty Cow Race,Tower Crash,Farming Simulator 2050 Ultra Max FREE,Fall Monkeys,Whack a Toad,Mega Tetris,Cloud Hunter,Winter Trucker,Zombie Slayer 3000,Crystal Hunt
+Thumbnail file name,jcr.png,tc.png,fsumf.png,fm.png,wat.png,mt.png,ch.png,wt.png,zs.png,crh.png
+Username,Alpha,Alpha,Carp,Joe Monka,Joe Monka,Alpha,Not A Bot,Not A Bot,Not A Bot,Gypsum
+User profile picture file name,alpha.png,alpha.png,carp.png,monka.png,monka.png,alpha.png,nab.png,nab.png,nab.png,gypsum.png
+Aditional 'screenshots' (optional),,,fsumf_s1_large.png,,,,,,,
+Aditional 'screenshots' (optional),,,fsumf_s2_large.png,,,,,,,
+Aditional 'screenshots' (optional),,,,,,,,,,
 "Categories (separate with a comma, use only from this list, 
 if you really want to add a new one, let me know)
 ADVENTURE
@@ -20,4 +20,43 @@ DRIVING
 CASUAL
 SOLO
 CO_OP
-PVP",,,,,,,,,,,,,,,,,,,
+PVP","CASUAL
+SIMULATION
+SOLO","CASUAL
+SURVIVAL
+SOLO
+CO_OP","SIMULATION
+CASUAL
+DRIVING
+SOLO","PVP
+ACTION
+SURVIVAL","CASUAL
+PUZZLE
+SOLO","PUZZLE
+SOLO","ADVENTURE
+ACTION
+SOLO
+CO_OP","DRIVING
+ADVENTURE
+SOLO
+PVP","ACTION
+SURVIVAL
+SOLO","ADVENTURE
+CASUAL
+SOLO
+CO_OP"
+Description,"Jaunty Cow Race is a thrilling and whimsical racing game that puts you in control of a herd of lively cows. Set in a vibrant and colorful countryside, players race their cows across various terrains, avoiding obstacles and collecting power-ups. Each cow has unique abilities, adding strategy and excitement to the races. Players can customize their cows with fun accessories and compete in single-player campaigns or against friends in multiplayer mode. With its charming graphics, engaging gameplay, and delightful sense of humor, Jaunty Cow Race offers endless fun for players of all ages. Ready, set, moo!
+
+Feel like racing these cows to the finish line?","Tower Crash is an action-packed, strategic game where players build and defend their towering fortresses against relentless waves of enemies. Each level presents unique challenges and obstacles, requiring players to craft innovative defenses and utilize a variety of weapons and abilities to protect their tower. With stunning graphics, engaging gameplay, and a mix of solo missions and multiplayer battles, Tower Crash offers endless excitement. Customize your tower, upgrade your defenses, and outsmart your opponents in this thrilling race against destruction. Will your tower stand tall or come crashing down?
+
+Ready to defend your fortress?","Farming Simulator 2050 Ultra Max FREE is an immersive and futuristic farming game that transports players to the year 2050. With cutting-edge technology and advanced AI, players manage their own farm, growing crops, raising livestock, and utilizing innovative machinery. The game features stunning graphics, realistic weather systems, and dynamic day-night cycles. Players can customize their farms, trade with other players, and participate in global farming competitions. Whether you're optimizing your harvest with automated drones or genetically enhancing your crops, Farming Simulator 2050 Ultra Max FREE offers an unparalleled farming experience. Get ready to revolutionize agriculture!
+
+Ready to embrace the future of farming?","Fall Monkeys is a fun and chaotic platformer where you guide a troop of mischievous monkeys as they navigate through vibrant jungle landscapes. The goal is to reach the bottom of each level by dodging obstacles, swinging from vines, and collecting bananas. Each monkey has unique abilities, adding strategic depth and excitement. The game features stunning graphics, lively music, and a variety of challenging levels. Whether playing solo or with friends, Fall Monkeys promises endless hours of energetic and entertaining E1gameplay. Get ready to swing, jump, and tumble with these playful primates!
+
+Ready to join the monkey mayhem?","Whack a Toad is a quirky and entertaining puzzle game where players guide a charming toad through a series of increasingly complex mazes. Each level is filled with obstacles, traps, and power-ups that require quick thinking and strategic moves. With delightful graphics, catchy music, and a variety of challenging puzzles, players must use their wits to help the toad reach its destination. The game features solo missions, time trials, and competitive multiplayer modes. Whether you're a casual gamer or a puzzle enthusiast, What a Toad offers endless fun and brain-teasing challenges. Are you ready to hop into the adventure?","Mega Tetris is an exhilarating twist on the classic puzzle game, taking the beloved block-stacking mechanics to new heights. In this ultra-modern version, players face a series of dynamic levels with enhanced visuals, vibrant colors, and innovative power-ups. Each stage presents unique challenges, from shifting gravity fields to time-limited puzzles. Players can compete in solo campaigns, tackle cooperative modes, or challenge friends in competitive multiplayer battles. With its captivating graphics, energetic soundtrack, and fast-paced gameplay, Mega Tetris offers a fresh and thrilling experience for both new and seasoned players. Ready to stack your way to victory?
+
+Ready to take on the Mega Tetris challenge?","Cloud Hunter is an enchanting adventure game that follows the journey of a courageous little girl riding a majestic unicorn through magical, cloud-filled skies. Players navigate through stunning, dreamlike environments, collecting stars and avoiding obstacles while battling mischievous cloud creatures. Each level offers unique challenges and mysteries, requiring quick reflexes and strategic thinking. With its captivating graphics, uplifting soundtrack, and engaging storyline, Cloud Hunter provides a heartwarming and thrilling experience. Players can unlock new abilities, discover hidden treasures, and customize their unicorn to make the adventure truly their own. Are you ready to soar among the clouds?
+
+Ready for a magical journey?","Winter Trucker is an intense and thrilling simulation game that puts you behind the wheel of a powerful truck navigating treacherous, snow-covered roads. Players must deliver critical supplies through blizzards, icy terrain, and unforgiving winter conditions. Each mission presents unique challenges, requiring skillful driving, strategic planning, and quick reflexes. With realistic weather effects, detailed environments, and customizable trucks, Winter Trucker offers an immersive and gripping experience. Whether you're hauling goods across frozen lakes or battling whiteout conditions, every journey is a test of endurance and bravery. Ready to brave the winter roads and prove your trucking prowess?
+
+Gear up for the ultimate winter trucking adventure!","Zombie Slayer 3000 is an intense, action-packed shooter set in a post-apocalyptic world overrun by relentless zombies. Players step into the boots of a futuristic warrior, armed with advanced weapons and gadgets, to fight through hordes of the undead. The game features dynamic environments, from ruined cities to dark forests, with challenging missions and boss battles. Upgrade your arsenal, unlock powerful abilities, and customize your character to survive. With multiplayer co-op, you can team up with friends for epic zombie-slaying action. Only the strongest will survive in this brutal, high-octane adventure! Prepare for the ultimate zombie massacre.","Crystal Hunt is an exhilarating treasure-hunting game set in a mystical world filled with hidden gems and ancient secrets. Players embark on an epic adventure, exploring enchanted forests, treacherous caves, and forgotten ruins in search of priceless crystals. Each level presents unique puzzles and challenges that require keen observation and strategic thinking. With breathtaking graphics, immersive soundtracks, and an engaging storyline, Crystal Hunt captivates players of all ages. Customize your character, unlock special abilities, and compete with friends to become the ultimate crystal hunter. Are you ready to embark on this dazzling quest?"

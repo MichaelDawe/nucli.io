@@ -96,6 +96,7 @@ func _ready() -> void:
 		gd.thumbnail = games[2][matches[i]]
 		gd.username = games[3][matches[i]]
 		gd.userpic = games[4][matches[i]]
+		gd.id = matches[i]
 		if not gcat.add_game(gd):
 			add_cat(gcat)
 			gcat = game_section.instantiate()

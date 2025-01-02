@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://qx4vrnh42kej"]
+
+[ext_resource type="Script" path="res://loading.gd" id="1_tu3wx"]
+[ext_resource type="Texture2D" uid="uid://ca73bsfg478ha" path="res://icons/loading.png" id="2_hwj7p"]
+
+[node name="Content" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tu3wx")
+
+[node name="Loading" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 1
+position = Vector2(859, 504)
+scale = Vector2(4, 4)
+texture = ExtResource("2_hwj7p")
+vframes = 5

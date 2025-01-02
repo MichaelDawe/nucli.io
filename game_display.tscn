@@ -33,3 +33,6 @@ alignment = 0
 [node name="Description" type="Label" parent="."]
 layout_mode = 2
 text_overrun_behavior = 3
+
+[connection signal="pressed" from="Thumbnail" to="." method="_on_thumbnail_pressed"]
+[connection signal="pressed" from="Username" to="." method="_on_username_pressed"]

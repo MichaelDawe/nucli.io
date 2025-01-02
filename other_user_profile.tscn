@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://p5dgocj41mrk"]
+[gd_scene load_steps=3 format=3 uid="uid://p5dgocj41mrk"]
 
 [ext_resource type="Texture2D" uid="uid://bwfd1g8ijnpgo" path="res://temp/profile_other_user.png" id="1_lywry"]
+[ext_resource type="Script" path="res://other_user_profile.gd" id="1_ompas"]
 
 [node name="Content" type="Control"]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ompas")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1

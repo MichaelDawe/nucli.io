@@ -1,7 +1,22 @@
-[gd_scene load_steps=3 format=3 uid="uid://2utkau03fn3k"]
+[gd_scene load_steps=6 format=3 uid="uid://2utkau03fn3k"]
 
 [ext_resource type="Script" path="res://games_page.gd" id="1_8d0w5"]
 [ext_resource type="Texture2D" uid="uid://cjqi8vjp1oxd" path="res://temp/games_page.png" id="1_bs7e2"]
+[ext_resource type="Texture2D" uid="uid://ohmsl658ilsv" path="res://icons/image-32-256.png" id="3_6nae8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f6q68"]
+bg_color = Color(0, 0.388235, 0.929412, 1)
+corner_radius_top_left = 42
+corner_radius_top_right = 42
+corner_radius_bottom_right = 42
+corner_radius_bottom_left = 42
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_igogf"]
+bg_color = Color(0, 0.27451, 0.909804, 1)
+corner_radius_top_left = 42
+corner_radius_top_right = 42
+corner_radius_bottom_right = 42
+corner_radius_bottom_left = 42
 
 [node name="Content" type="Control"]
 layout_mode = 3
@@ -12,7 +27,16 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8d0w5")
 
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,3 +45,103 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_bs7e2")
 expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 88.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="GameMain" type="VBoxContainer" parent="MarginContainer/HBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/ScrollContainer/GameMain"]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 0
+theme_override_constants/margin_right = 64
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/ScrollContainer/GameMain/MarginContainer"]
+layout_mode = 2
+
+[node name="CoverArt" type="TextureRect" parent="MarginContainer/HBoxContainer/ScrollContainer/GameMain/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("3_6nae8")
+expand_mode = 5
+
+[node name="GameTitle" type="Label" parent="MarginContainer/HBoxContainer/ScrollContainer/GameMain/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Username" type="Button" parent="MarginContainer/HBoxContainer/ScrollContainer/GameMain/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+alignment = 0
+
+[node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/ScrollContainer/GameMain/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 21
+
+[node name="Play" type="Button" parent="MarginContainer/HBoxContainer/ScrollContainer/GameMain/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 42
+theme_override_styles/hover = SubResource("StyleBoxFlat_f6q68")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_igogf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_f6q68")
+text = "_PLAY"
+
+[node name="HSeparator2" type="HSeparator" parent="MarginContainer/HBoxContainer/ScrollContainer/GameMain/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 21
+
+[node name="Description" type="RichTextLabel" parent="MarginContainer/HBoxContainer/ScrollContainer/GameMain/MarginContainer/VBoxContainer"]
+layout_mode = 2
+fit_content = true
+
+[node name="Comments" type="Label" parent="MarginContainer/HBoxContainer/ScrollContainer/GameMain"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 1, 1)
+text = "NOTE: Commends go below?"
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.05
+
+[node name="ScrollContainer2" type="ScrollContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="RecommendedGames" type="VBoxContainer" parent="MarginContainer/HBoxContainer/ScrollContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+
+[connection signal="pressed" from="MarginContainer/HBoxContainer/ScrollContainer/GameMain/MarginContainer/VBoxContainer/Username" to="." method="_on_username_pressed"]
+[connection signal="pressed" from="MarginContainer/HBoxContainer/ScrollContainer/GameMain/MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
