@@ -3,7 +3,13 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	$ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer/Label2.text = "  " + str(randi_range(20, 200))
+	$ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2/Label3.text = "  " + str(randi_range(40, 400))
+	$ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3/Label4.text = "  " + str(randi_range(60, 600))
+	$ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer/Label2.text = "  " + str(randi_range(10, 120))
+	$ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer2/Label3.text = "  " + str(randi_range(10, 100) / 10.0)
+	$ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer3/Label4.text = "  " + str(randi_range(40, 90)) + "%"
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

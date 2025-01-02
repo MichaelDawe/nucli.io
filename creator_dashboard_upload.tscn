@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://1aij4srh0ya3"]
+[gd_scene load_steps=20 format=3 uid="uid://1aij4srh0ya3"]
 
 [ext_resource type="Script" path="res://creator_dashboard_upload.gd" id="1_qsc0y"]
 [ext_resource type="Texture2D" uid="uid://cf4sg7i45rehh" path="res://temp/Creator_Dashboard_Page_FINISHED.png" id="3_ey4at"]
@@ -11,6 +11,38 @@
 [ext_resource type="Texture2D" uid="uid://dcjssoqj5c5h5" path="res://temp/Creator_Analytics_Page_DONE_Creator.png" id="6_m54s3"]
 [ext_resource type="Texture2D" uid="uid://csv2b2w80yag" path="res://temp/Creator_Analytics_Page_DONE_Games.png" id="7_1ninu"]
 [ext_resource type="Texture2D" uid="uid://dqqf0xyf02qj5" path="res://temp/Creator_Analytics_Page_DONE_Audience.png" id="8_2brih"]
+[ext_resource type="Texture2D" uid="uid://bamogbybp1fcd" path="res://game_images/wat.png" id="9_71st0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ap55v"]
+bg_color = Color(0, 0.698039, 1, 0.513726)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1kofy"]
+bg_color = Color(0, 0.27451, 0.909804, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0, 0.27451, 0.909804, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68m17"]
+bg_color = Color(0.000705789, 0.247199, 0.827847, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0, 0.247059, 0.827451, 1)
+corner_radius_top_left = 24
+corner_radius_top_right = 24
+corner_radius_bottom_right = 24
+corner_radius_bottom_left = 24
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2qeg5"]
 bg_color = Color(0, 0.27451, 0.909804, 1)
@@ -155,7 +187,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="CreatorDashboardHome" type="MarginContainer" parent="ScrollContainer/VBoxContainer"]
-visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 32
@@ -178,6 +209,209 @@ disabled = true
 text = "CREATOR_DASHBOARD"
 flat = true
 
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ap55v")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "CREATOR_ANALITIC"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.27451, 0.909804, 1)
+text = "CURRENT_FOLLOWERS"
+
+[node name="VSeparator3" type="VSeparator" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.27451, 0.909804, 1)
+horizontal_alignment = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.27451, 0.909804, 1)
+text = "TOTAL_PROFILE_VISIT"
+
+[node name="VSeparator2" type="VSeparator" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label3" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.27451, 0.909804, 1)
+horizontal_alignment = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.27451, 0.909804, 1)
+text = "TOTAL_GAME_PLAYS"
+
+[node name="VSeparator" type="VSeparator" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label4" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.27451, 0.909804, 1)
+horizontal_alignment = 2
+
+[node name="VSeparator" type="VSeparator" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/hover = SubResource("StyleBoxFlat_1kofy")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_68m17")
+theme_override_styles/normal = SubResource("StyleBoxFlat_1kofy")
+text = "GO_TO_CREATOR_ANALITICS"
+
+[node name="HSeparator" type="HSeparator" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="MarginContainer2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ap55v")
+
+[node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "LATEST_GAME_PERF"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.27451, 0.909804, 1)
+theme_override_font_sizes/font_size = 24
+text = "Whack A Toad"
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+texture = ExtResource("9_71st0")
+
+[node name="VSeparator" type="VSeparator" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.27451, 0.909804, 1)
+text = "_PLAYS"
+
+[node name="VSeparator3" type="VSeparator" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.27451, 0.909804, 1)
+horizontal_alignment = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.27451, 0.909804, 1)
+text = "AVERAGE_PLAY_TIME"
+
+[node name="VSeparator2" type="VSeparator" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label3" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.27451, 0.909804, 1)
+horizontal_alignment = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.27451, 0.909804, 1)
+text = "FINISH_PERCENTAGE"
+
+[node name="VSeparator" type="VSeparator" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label4" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/HBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.27451, 0.909804, 1)
+horizontal_alignment = 2
+
+[node name="VSeparator2" type="VSeparator" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
 [node name="VSeparator" type="VSeparator" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -186,6 +420,23 @@ size_flags_stretch_ratio = 0.13
 [node name="Right" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer"]
+layout_mode = 2
+
+[node name="HSeparator" type="HSeparator" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("6_cbbkp")
+expand_mode = 5
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "CLIO_DASHBOARD_HOME"
 
 [node name="YourGames" type="MarginContainer" parent="ScrollContainer/VBoxContainer"]
 visible = false
@@ -625,7 +876,6 @@ icon = ExtResource("4_vgqrw")
 flat = true
 
 [node name="Popout_Menu" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -671,7 +921,7 @@ alignment = 0
 [node name="Creator_Analitics" type="Button" parent="Popout_Menu/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 24
-text = "CREATOR_ANALITICS"
+text = "CREATOR_ANALITICS_CD"
 alignment = 0
 
 [node name="Your_Games" type="Button" parent="Popout_Menu/VBoxContainer"]
@@ -707,7 +957,7 @@ alignment = 0
 
 [node name="Settings" type="Button" parent="Popout_Menu/VBoxContainer"]
 layout_mode = 2
-text = "SETTINGS"
+text = "SETTINGS_CD"
 alignment = 0
 
 [node name="Report_Problem" type="Button" parent="Popout_Menu/VBoxContainer"]
