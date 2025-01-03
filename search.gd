@@ -27,41 +27,47 @@ func _ready() -> void:
 	
 	# display catagories
 	if catagory > 0:
+		var cat_query = ""
 		match catagory:
 			1: #new
-				pass
+				cat_query = "NEW"
 			2: #featured
-				pass
+				cat_query = "FEATURED"
 			3: #popular
-				pass
+				cat_query = "POPULAR"
 			4: #random
-				pass
+				spawn_random_game()
 			5: #adventure
-				pass
+				cat_query = "ADVENTURE"
 			6: #action
-				pass
+				cat_query = "ACTION"
 			7: #stratagy
-				pass
+				cat_query = "STRATEGY"
 			8: #puzzle
-				pass
+				cat_query = "PUZZLE"
 			9: #horror
-				pass
+				cat_query = "HORROR"
 			10: #survival
-				pass
+				cat_query = "SURVIVAL"
 			11: #simulation
-				pass
+				cat_query = "SIMULATION"
 			12: #fps
-				pass
+				cat_query = "FPS"
 			13: #driving
-				pass
+				cat_query = "DRIVING"
 			14: #casual
-				pass
+				cat_query = "CASUAL"
 			15: #solo
-				pass
+				cat_query = "SOLO"
 			16: #co-op
-				pass
+				cat_query = "CO_OP"
 			17: #pvp
-				pass
+				cat_query = "PVP"
+		query = cat_query.to_lower()
+		# if query in tags: add game index to matches
+		for i in len(games[1]):
+			if query in games[8][i].to_lower():
+				matches.append(i)
 	else:
 		# make query lowercase and split into words
 		query = query.to_lower()
@@ -111,3 +117,6 @@ func _ready() -> void:
 func add_cat(scene):
 	$ScrollContainer/VBoxContainer.add_child(scene)
 	$ScrollContainer/VBoxContainer.move_child(scene, $ScrollContainer/VBoxContainer/HSeparator5.get_index())
+
+func spawn_random_game():
+	get_parent().spawn_game(randi_range(0, len(games[1]) - 1))
