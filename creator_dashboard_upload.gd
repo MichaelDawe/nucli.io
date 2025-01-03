@@ -151,3 +151,7 @@ func _on_report_problem_pressed() -> void:
 
 func _on_button_pressed() -> void:
 	_on_creator_analitics_pressed()
+
+
+func _on_upload_button_pressed() -> void:
+	get_parent().spawn_loading()

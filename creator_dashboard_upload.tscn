@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://1aij4srh0ya3"]
+[gd_scene load_steps=23 format=3 uid="uid://1aij4srh0ya3"]
 
 [ext_resource type="Script" path="res://creator_dashboard_upload.gd" id="1_qsc0y"]
 [ext_resource type="Texture2D" uid="uid://cf4sg7i45rehh" path="res://temp/Creator_Dashboard_Page_FINISHED.png" id="3_ey4at"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://bamogbybp1fcd" path="res://game_images/wat.png" id="9_71st0"]
 [ext_resource type="Texture2D" uid="uid://cb6r71gyjkpxn" path="res://game_images/alpha.png" id="10_er5vn"]
 [ext_resource type="Texture2D" uid="uid://b2ociebku3ysv" path="res://game_images/gypsum.png" id="11_x8qug"]
+[ext_resource type="Texture2D" uid="uid://cl2nwn532wri5" path="res://icons/down-arrow-9-32.png" id="14_0r4tp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ap55v"]
 bg_color = Color(0, 0.698039, 1, 0.513726)
@@ -808,7 +809,13 @@ theme_override_colors/font_focus_color = Color(0, 0.698039, 1, 1)
 theme_override_colors/font_color = Color(0, 0.698039, 1, 1)
 theme_override_font_sizes/font_size = 42
 text = "AGE_RESTRICT_DROPDOWN"
+icon = ExtResource("14_0r4tp")
 alignment = 0
+icon_alignment = 2
+item_count = 2
+popup/item_0/text = "YES_"
+popup/item_1/text = "OVER_16"
+popup/item_1/id = 1
 
 [node name="Label5" type="Label" parent="ScrollContainer/VBoxContainer/UploadNew/HBoxContainer/Left"]
 layout_mode = 2
@@ -825,7 +832,14 @@ theme_override_colors/font_focus_color = Color(0, 0.698039, 1, 1)
 theme_override_colors/font_color = Color(0, 0.698039, 1, 1)
 theme_override_font_sizes/font_size = 42
 text = "ADD_TO_PLAYLIST_DROPDOWN"
+icon = ExtResource("14_0r4tp")
 alignment = 0
+icon_alignment = 2
+item_count = 2
+popup/item_0/text = "NO_PLAYLISTS"
+popup/item_0/disabled = true
+popup/item_1/text = "CREATE_NEW_PLAYLIST"
+popup/item_1/id = 1
 
 [node name="Label6" type="Label" parent="ScrollContainer/VBoxContainer/UploadNew/HBoxContainer/Left"]
 layout_mode = 2
@@ -886,7 +900,12 @@ theme_override_colors/font_focus_color = Color(0, 0.698039, 1, 1)
 theme_override_colors/font_color = Color(0, 0.698039, 1, 1)
 theme_override_font_sizes/font_size = 42
 text = "MORE_OPTIONS"
+icon = ExtResource("14_0r4tp")
 alignment = 0
+icon_alignment = 2
+item_count = 1
+popup/item_0/text = "Add downloadable version *unsupported*"
+popup/item_0/disabled = true
 
 [node name="Upload_Button" type="Button" parent="ScrollContainer/VBoxContainer/UploadNew/HBoxContainer/Right"]
 layout_mode = 2
@@ -1214,6 +1233,7 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
 
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/UploadNew/HBoxContainer/Right/Upload_Button" to="." method="_on_upload_button_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/CreatorAnalitics1/HBoxContainer/all/HBoxContainer/creatorCap" to="." method="_on_creator_cap_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/CreatorAnalitics1/HBoxContainer/all/HBoxContainer/gamesCap" to="." method="_on_games_cap_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/CreatorAnalitics1/HBoxContainer/all/HBoxContainer/audienceCap" to="." method="_on_audience_cap_pressed"]
