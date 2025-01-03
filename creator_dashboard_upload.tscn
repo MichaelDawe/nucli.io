@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://1aij4srh0ya3"]
+[gd_scene load_steps=22 format=3 uid="uid://1aij4srh0ya3"]
 
 [ext_resource type="Script" path="res://creator_dashboard_upload.gd" id="1_qsc0y"]
 [ext_resource type="Texture2D" uid="uid://cf4sg7i45rehh" path="res://temp/Creator_Dashboard_Page_FINISHED.png" id="3_ey4at"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://csv2b2w80yag" path="res://temp/Creator_Analytics_Page_DONE_Games.png" id="7_1ninu"]
 [ext_resource type="Texture2D" uid="uid://dqqf0xyf02qj5" path="res://temp/Creator_Analytics_Page_DONE_Audience.png" id="8_2brih"]
 [ext_resource type="Texture2D" uid="uid://bamogbybp1fcd" path="res://game_images/wat.png" id="9_71st0"]
+[ext_resource type="Texture2D" uid="uid://cb6r71gyjkpxn" path="res://game_images/alpha.png" id="10_er5vn"]
+[ext_resource type="Texture2D" uid="uid://b2ociebku3ysv" path="res://game_images/gypsum.png" id="11_x8qug"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ap55v"]
 bg_color = Color(0, 0.698039, 1, 0.513726)
@@ -107,6 +109,7 @@ texture = ExtResource("4_fat83")
 expand_mode = 1
 
 [node name="_CreatorDashboardHome" type="TextureRect" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -345,15 +348,19 @@ layout_mode = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0.27451, 0.909804, 1)
-theme_override_font_sizes/font_size = 24
-text = "Whack A Toad"
-
 [node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 texture = ExtResource("9_71st0")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/TextureRect"]
+layout_mode = 2
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 264.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0, 0.27451, 0.909804, 1)
+theme_override_font_sizes/font_size = 24
+text = "Whack A Toad"
 
 [node name="VSeparator" type="VSeparator" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer2/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -437,6 +444,11 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
 
+[node name="HSeparator3" type="HSeparator" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
 [node name="MarginContainer" type="MarginContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right"]
 layout_mode = 2
 
@@ -465,8 +477,12 @@ layout_mode = 2
 texture = ExtResource("9_71st0")
 stretch_mode = 3
 
-[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer"]
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer/TextureRect"]
 layout_mode = 2
+offset_left = -63.0
+offset_top = 156.0
+offset_right = 412.0
+offset_bottom = 190.0
 theme_override_colors/font_color = Color(0, 0.27451, 0.909804, 1)
 theme_override_font_sizes/font_size = 24
 text = "Whack A Toad          "
@@ -505,6 +521,140 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0.27451, 0.909804, 1)
 theme_override_font_sizes/font_size = 48
 text = "RECENT_COMMENTS"
+
+[node name="HSeparator2" type="HSeparator" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Comment" type="MarginContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer/Comment"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer/Comment/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer/Comment/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer/Comment/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("10_er5vn")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer/Comment/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0.27451, 0.909804, 1)
+text = "@Alpha"
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer/Comment/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 10
+text = "   2 days ago"
+vertical_alignment = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer/Comment/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = ":) :) :) :)"
+
+[node name="VSeparator" type="VSeparator" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer/Comment/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer/Comment/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("9_71st0")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer/Comment/HBoxContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -109.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0.27451, 0.909804, 1)
+theme_override_font_sizes/font_size = 10
+text = "Whack A Toad"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="HSeparator5" type="HSeparator" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="Comment2" type="MarginContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer/Comment2"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer/Comment2/HBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer/Comment2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer/Comment2/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+texture = ExtResource("11_x8qug")
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer/Comment2/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0, 0.27451, 0.909804, 1)
+text = "@gypsum"
+
+[node name="Label2" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer/Comment2/HBoxContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 10
+text = "   2 days ago"
+vertical_alignment = 2
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer/Comment2/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = ":) Love this game sm"
+
+[node name="VSeparator" type="VSeparator" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer/Comment2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer/Comment2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("9_71st0")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right/MarginContainer/MarginContainer/VBoxContainer/Comment2/HBoxContainer/TextureRect"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -109.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0.27451, 0.909804, 1)
+theme_override_font_sizes/font_size = 10
+text = "Whack A Toad"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="HSeparator4" type="HSeparator" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Right"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 12
 
 [node name="VSeparator2" type="VSeparator" parent="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer"]
 layout_mode = 2
@@ -1063,6 +1213,7 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 0.5
 
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/CreatorDashboardHome/HBoxContainer/Left/MarginContainer/MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/CreatorAnalitics1/HBoxContainer/all/HBoxContainer/creatorCap" to="." method="_on_creator_cap_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/CreatorAnalitics1/HBoxContainer/all/HBoxContainer/gamesCap" to="." method="_on_games_cap_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/CreatorAnalitics1/HBoxContainer/all/HBoxContainer/audienceCap" to="." method="_on_audience_cap_pressed"]
