@@ -38,6 +38,7 @@ var quit_confirm = preload("res://quit_confirm.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	$AudioStreamPlayer2D.volume_db = 10 * (log(32 / 100.0) / log(10))
 	# stop it automatically quitting
 	get_tree().set_auto_accept_quit(false)
 	# setup blank textures for heatmapping 

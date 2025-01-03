@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjfacka6fgpd7"]
+[gd_scene load_steps=3 format=3 uid="uid://cjfacka6fgpd7"]
 
 [ext_resource type="Texture2D" uid="uid://d1frr51h4g6wv" path="res://temp/settings_page.png" id="1_6p41r"]
+[ext_resource type="Script" path="res://settings.gd" id="1_pdykn"]
 
 [node name="Content" type="Control"]
 layout_mode = 3
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_pdykn")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -19,3 +21,13 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_6p41r")
 expand_mode = 1
+
+[node name="HSlider" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 487.0
+offset_top = 557.0
+offset_right = 844.0
+offset_bottom = 604.0
+value = 32.0
+
+[connection signal="drag_ended" from="HSlider" to="." method="_on_h_slider_drag_ended"]

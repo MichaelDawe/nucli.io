@@ -143,7 +143,6 @@ texture = ExtResource("5_uuk26")
 expand_mode = 1
 
 [node name="_CreatorAnalitics1" type="TextureRect" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -191,6 +190,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="CreatorDashboardHome" type="MarginContainer" parent="ScrollContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 32
@@ -984,8 +984,8 @@ alignment = 0
 layout_mode = 2
 
 [node name="creatorCap" type="Button" parent="ScrollContainer/VBoxContainer/CreatorAnalitics1/HBoxContainer/all/HBoxContainer"]
-modulate = Color(0.682353, 1, 1, 1)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.682353, 1, 1, 1)
 theme_override_font_sizes/font_size = 48
 text = "CREATOR_CAP"
 
@@ -1038,8 +1038,8 @@ theme_override_font_sizes/font_size = 48
 text = "CREATOR_CAP"
 
 [node name="gamesCap" type="Button" parent="ScrollContainer/VBoxContainer/CreatorAnalitics2/HBoxContainer/all/HBoxContainer"]
-modulate = Color(0.682353, 1, 1, 1)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.682353, 1, 1, 1)
 theme_override_font_sizes/font_size = 48
 text = "GAMES_CAP"
 
@@ -1054,7 +1054,6 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.13
 
 [node name="CreatorAnalitics3" type="MarginContainer" parent="ScrollContainer/VBoxContainer"]
-visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 32
@@ -1092,8 +1091,8 @@ theme_override_font_sizes/font_size = 48
 text = "GAMES_CAP"
 
 [node name="audienceCap" type="Button" parent="ScrollContainer/VBoxContainer/CreatorAnalitics3/HBoxContainer/all/HBoxContainer"]
-modulate = Color(0.682353, 1, 1, 1)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.682353, 1, 1, 1)
 theme_override_font_sizes/font_size = 48
 text = "AUDIENCE_CAP"
 
